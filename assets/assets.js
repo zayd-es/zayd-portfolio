@@ -1,4 +1,3 @@
-import { Code2, GraduationCap, Briefcase } from "lucide-react";
 import { Layout, Smartphone, MousePointer2, Palette } from "lucide-react";
 import { 
   SiHtml5, 
@@ -12,6 +11,7 @@ import {
   SiGithub           
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+import { Code2, GraduationCap, Laptop, Terminal, Rocket } from "lucide-react";
 
 import screenChatbot from './screen Chatbot.png';
 import screenDashboard from './screen Dashboard.png';
@@ -28,7 +28,7 @@ export const workData = [
         description: 'Modern analytics dashboard featuring Shadcn/UI and Next.js performance.',
         bgImage: screenDashboard, 
         link: 'https://next16-shadcn-dashboard.vercel.app'
-    },
+      },
    
 ];
 export const serviceData = [
@@ -58,21 +58,22 @@ export const serviceData = [
   },
 ];
 
+
 export const infoList = [
   {
-    Icon: Code2,
-    title: 'Languages',
-    description: 'HTML, CSS, JavaScript, React Js, Next Js'
+    icon: Terminal,
+    title: 'Tech Stack',
+    description: 'React, Next.js, Tailwind CSS' 
   },
   {
-    Icon: GraduationCap,
-    title: 'Education',
-    description: 'B.Tech in Computer Science'
+    icon: Laptop,
+    title: 'Freelance Experience',
+    description: 'Developed custom web solutions for diverse clients'
   },
   {
-    Icon: Briefcase,
-    title: 'Projects',
-    description: 'Built more than 5 projects'
+    icon: Rocket, 
+    title: 'Main Projects',
+    description: 'AI ChatBots, Admin Dashboards & E-commerce '
   }
 ];
 

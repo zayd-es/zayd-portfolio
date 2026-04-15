@@ -70,16 +70,13 @@ export const MagicCard = ({
         willChange: "transform",
       }}
     >
-      {/* Spotlight glow */}
       <div
         className="pointer-events-none absolute -inset-px transition duration-300"
         style={{
           opacity,
           background: `radial-gradient(${gradientSize}px circle at ${position.x}px ${position.y}px, ${gradientColor}55, transparent 100%)`,
         }}
-      />
-
-      {/* Spinning border */}
+      />{" "}
       <div
         className="pointer-events-none absolute inset-0 rounded-xl transition-opacity duration-300"
         style={{
@@ -93,8 +90,6 @@ export const MagicCard = ({
           animation: opacity ? "magic-spin 2s linear infinite" : "none",
         }}
       />
-
-      {/* Content lifted in Z */}
       <div
         className="relative z-10"
         style={{ transform: "translateZ(20px)", transformStyle: "preserve-3d" }}

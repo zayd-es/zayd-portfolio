@@ -51,7 +51,6 @@ const Services = () => {
             whileHover={{ y: -10 }}
             className="group relative border border-gray-400 rounded-2xl px-8 py-12 cursor-pointer transition-all duration-500 dark:border-white/20 dark:bg-[#1a1625]/40 backdrop-blur-sm"
           >
-            {/* Background Glow on Hover */}
             <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
 
             <div className="relative z-10">
@@ -76,7 +75,6 @@ const Services = () => {
               </a>
             </div>
 
-            {/* Border Glow Effect */}
             <div className="absolute inset-0 rounded-2xl border border-blue-500/0 group-hover:border-blue-500/30 transition-colors duration-500" />
           </motion.div>
         ))}
