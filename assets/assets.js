@@ -11,7 +11,7 @@ import {
   SiGithub           
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-import { Code2, GraduationCap, Laptop, Terminal, Rocket } from "lucide-react";
+import {  Laptop, Terminal, Rocket } from "lucide-react";
 
 import screenChatbot from './screen Chatbot.png';
 import screenDashboard from './screen Dashboard.png';
@@ -72,21 +72,21 @@ export const serviceData = [
 
 
 export const infoList = [
-  {
-    icon: Terminal,
-    title: 'Tech Stack',
-    description: 'React, Next.js, Tailwind CSS' 
-  },
+ {
+  icon: Terminal,
+  title: 'Tech Stack',
+  description: 'Building modern web apps with  Next.js, React and Tailwind CSS, powered by shadcn/ui and optimized with Claude AI.'
+},
   {
     icon: Laptop,
     title: 'Freelance Experience',
     description: 'Developed custom web solutions for diverse clients'
   },
-  {
-    icon: Rocket, 
-    title: 'Main Projects',
-    description: 'AI ChatBots, Admin Dashboards & E-commerce '
-  }
+{
+  icon: Rocket, 
+  title: 'Workflow',
+  description: 'Accelerating development with AI-assisted tools to build better UI in record time' 
+}
 ];
 
 
