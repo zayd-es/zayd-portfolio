@@ -1,225 +1,214 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { workData } from "../../assets/assets";
 import { ArrowRight, ArrowLeft, ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  EffectCoverflow,
-} from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 
-const Work = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const [isClient, setIsClient] = useState(false);
+const StarRating = ({ level }) => (
+  <div className="flex gap-[1px] sm:gap-[2px]">
+    {[1, 2, 3, 4, 5].map((s) => (
+      <svg
+        key={s}
+        width="8"
+        height="8"
+        className="sm:w-[10px] sm:h-[10px]"
+        viewBox="0 0 10 10"
+      >
+        <path
+          d="M5 1l1.12 2.27L9 3.64l-2 1.95.47 2.75L5 7.01 2.53 8.34 3 5.59 1 3.64l2.88-.37L5 1z"
+          fill={s <= level ? "#facc15" : "none"}
+          stroke={s <= level ? "#facc15" : "rgba(156, 163, 175, 0.4)"}
+          strokeWidth="0.8"
+        />
+      </svg>
+    ))}
+  </div>
+);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) return null;
+const ProjectCard = ({ project, isCurrent }) => {
+  const [hovered, setHovered] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      id="work"
-      className="w-full px-[12%] py-10 scroll-mt-20 overflow-hidden"
+    <div
+      className="relative w-full h-full rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1625] shadow-xl transition-all duration-500"
+      onMouseEnter={() => isCurrent && setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <motion.h4
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-center mb-2 text-lg font-ovo capitalize dark:text-white"
-      >
-        my portfolio
-      </motion.h4>
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={project.bgImage}
+          alt={project.title}
+          fill
+          className={`object-cover object-top transition-transform duration-700 ${isCurrent && hovered ? "scale-110" : "scale-100"}`}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90" />
+      </div>
 
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-center text-5xl font-ovo capitalize dark:text-white"
-      >
-        my latest work
-      </motion.h2>
+      {/* Content Layer */}
+      <div className="relative z-10 h-full p-4 sm:p-7 flex flex-col justify-end overflow-hidden">
+        {isCurrent ? (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="w-full"
+          >
+            <span className="inline-block text-[8px] sm:text-[9px] font-black text-white bg-blue-600 px-2 py-0.5 rounded-full mb-2 uppercase font-ovo">
+              {project.type?.split(" ")[0] || "PRO"}
+            </span>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.7, delay: 0.7 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo dark:text-white/80"
-      >
-        Explore a collection of projects showcasing my expertise in React,
-        Next.js, and high-end UI implementation.
-      </motion.p>
+            <h3 className="text-lg sm:text-2xl font-black text-white leading-tight mb-1 uppercase italic font-ovo line-clamp-1">
+              {project.title}
+            </h3>
 
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.9 }}
-        className="relative"
-      >
-        <button
-          ref={prevRef}
-          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 z-10 w-11 h-11 rounded-full bg-white dark:bg-white/10 border border-gray-200 dark:border-white/20 items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200 backdrop-blur-sm"
-        >
-          <ArrowLeft className="w-4 h-4 text-gray-700 dark:text-white" />
-        </button>
+            <p className="text-[9px] sm:text-[11px] text-gray-300 mb-3 sm:mb-5 line-clamp-2 font-ovo leading-relaxed">
+              {project.description}
+            </p>
 
-        <button
-          ref={nextRef}
-          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 z-10 w-11 h-11 rounded-full bg-white dark:bg-white/10 border border-gray-200 dark:border-white/20 items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200 backdrop-blur-sm"
-        >
-          <ArrowRight className="w-4 h-4 text-gray-700 dark:text-white" />
-        </button>
-
-        <Swiper
-          modules={[Autoplay, Navigation, Pagination, EffectCoverflow]}
-          effect="coverflow"
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 80,
-            modifier: 2.5,
-            slideShadows: false,
-          }}
-          centeredSlides={true}
-          slidesPerView={1.2}
-          spaceBetween={20}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          pagination={{
-            clickable: true,
-            bulletClass: "swiper-bullet",
-            bulletActiveClass: "swiper-bullet-active",
-          }}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          onSwiper={(swiper) => {
-            setTimeout(() => {
-              if (swiper.params?.navigation) {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              }
-            });
-          }}
-          breakpoints={{
-            640: { slidesPerView: 1.5, spaceBetween: 24 },
-            768: { slidesPerView: 2.2, spaceBetween: 28 },
-            1024: { slidesPerView: 3, spaceBetween: 32 },
-            1280: { slidesPerView: 3.5, spaceBetween: 32 },
-          }}
-          className="!pb-12"
-        >
-          {workData.map((project, index) => (
-            <SwiperSlide key={index}>
-              {({ isActive }) => (
-                <motion.a
-                  href={project.link}
-                  target="_blank"
-                  whileHover="hover"
-                  className={`group relative block rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ${
-                    isActive
-                      ? "shadow-2xl shadow-black/30 scale-100"
-                      : "opacity-70 scale-95"
-                  }`}
-                  style={{ aspectRatio: "3/4" }}
+            <div className="space-y-1.5 bg-black/40 backdrop-blur-md rounded-xl p-3 border border-white/10">
+              {project.tags?.slice(0, 4).map((tag, i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-between text-white font-ovo uppercase font-bold text-[8px] sm:text-[10px]"
                 >
-                  {/* Image */}
-                  <motion.div
-                    variants={{ hover: { scale: 1.04 } }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="absolute inset-0"
-                  >
-                    <Image
-                      src={project.bgImage}
-                      alt={project.title}
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 768px) 80vw, 33vw"
-                    />
-                  </motion.div>
+                  <span className="truncate mr-2">{tag.name}</span>
+                  <StarRating level={tag.level} />
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        ) : (
+          <div className="text-center pb-4 opacity-30">
+            <h3 className="text-xs sm:text-sm font-bold text-white uppercase italic truncate font-ovo">
+              {project.title}
+            </h3>
+          </div>
+        )}
+      </div>
 
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+      {/* Hover Overlay Button */}
+      {isCurrent && (
+        <div
+          className={`absolute inset-0 z-20 bg-black/40 backdrop-blur-[2px] transition-opacity duration-300 flex items-center justify-center ${hovered ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        >
+          <a
+            href={project.link}
+            target="_blank"
+            className="bg-white text-black text-[10px] font-black px-6 py-2.5 rounded-full hover:scale-105 transition-transform shadow-2xl"
+          >
+            VIEW CASE
+          </a>
+        </div>
+      )}
+    </div>
+  );
+};
 
-                  {/* Live badge */}
-                  <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20 text-[10px] text-white uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
-                    <ExternalLink className="w-3 h-3" />
-                    Live
-                  </div>
+const Work = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
-                  {/* Bottom info */}
-                  <div className="absolute bottom-0 left-0 w-full p-5">
-                    <p className="text-[10px] text-white/50 uppercase tracking-widest mb-1 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                      {project.type || "Project"}
-                    </p>
-                    <div className="flex items-end justify-between gap-2">
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-semibold text-white leading-tight drop-shadow-md">
-                          {project.title}
-                        </h3>
-                        <p className="text-xs text-gray-300 mt-1 line-clamp-2 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-75">
-                          {project.description}
-                        </p>
-                      </div>
-                      <div className="shrink-0 w-9 h-9 bg-white rounded-full flex items-center justify-center text-black shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
-                    </div>
-                  </div>
-                </motion.a>
-              )}
-            </SwiperSlide>
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const navigate = useCallback((dir) => {
+    setCurrentIndex((prev) => (prev + dir + workData.length) % workData.length);
+  }, []);
+
+  const cards = [
+    {
+      id: "prev",
+      index: (currentIndex - 1 + workData.length) % workData.length,
+    },
+    { id: "current", index: currentIndex },
+    { id: "next", index: (currentIndex + 1) % workData.length },
+  ];
+
+  return (
+    <section
+      id="work"
+      className="relative w-full px-4 py-16 sm:py-24 overflow-hidden bg-white dark:bg-[#0a0614] transition-colors duration-500"
+    >
+      <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center">
+        <div className="text-center mb-10 sm:mb-16">
+          <h4 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-blue-600 font-bold font-ovo mb-2">
+            Portfolio
+          </h4>
+          <h2 className="text-3xl sm:text-5xl font-black dark:text-white uppercase font-ovo tracking-tighter">
+            Latest{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-500">
+              Works
+            </span>
+          </h2>
+        </div>
+
+        <div
+          className="relative w-full h-[380px] sm:h-[500px] flex items-center justify-center"
+          style={{ perspective: "1200px" }}
+        >
+          <button
+            onClick={() => navigate(-1)}
+            className="absolute left-0 sm:left-10 z-50 p-3 rounded-full bg-white dark:bg-white/5 shadow-lg border border-gray-100 dark:border-white/10 hover:bg-gray-50 active:scale-90 transition-all"
+          >
+            <ArrowLeft className="w-5 h-5 dark:text-white" />
+          </button>
+
+          <div className="relative w-full max-w-[280px] sm:max-w-[340px] h-full">
+            {cards.map(({ id, index }) => (
+              <motion.div
+                key={`${index}-${id}`}
+                animate={{
+                  x:
+                    id === "prev"
+                      ? isMobile
+                        ? "-70%"
+                        : "-85%"
+                      : id === "next"
+                        ? isMobile
+                          ? "70%"
+                          : "85%"
+                        : "0%",
+                  scale: id === "current" ? 1 : 0.7,
+                  opacity: id === "current" ? 1 : 0.3,
+                  rotateY: id === "prev" ? 25 : id === "next" ? -25 : 0,
+                  zIndex: id === "current" ? 40 : 10,
+                }}
+                transition={{ type: "spring", stiffness: 260, damping: 25 }}
+                className="absolute inset-0"
+              >
+                <ProjectCard
+                  project={workData[index]}
+                  isCurrent={id === "current"}
+                />
+              </motion.div>
+            ))}
+          </div>
+
+          <button
+            onClick={() => navigate(1)}
+            className="absolute right-0 sm:right-10 z-50 p-3 rounded-full bg-white dark:bg-white/5 shadow-lg border border-gray-100 dark:border-white/10 hover:bg-gray-50 active:scale-90 transition-all"
+          >
+            <ArrowRight className="w-5 h-5 dark:text-white" />
+          </button>
+        </div>
+
+        {/* Dots */}
+        <div className="flex gap-2 mt-10">
+          {workData.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentIndex(i)}
+              className={`h-1.5 rounded-full transition-all ${currentIndex === i ? "w-8 bg-blue-600" : "w-2 bg-gray-300 dark:bg-white/10"}`}
+            />
           ))}
-        </Swiper>
-      </motion.div>
-
-      {/* Custom pagination styles */}
-      <style jsx global>{`
-        .swiper-bullet {
-          display: inline-block;
-          width: 6px;
-          height: 6px;
-          border-radius: 9999px;
-          background: rgba(150, 150, 150, 0.4);
-          margin: 0 3px;
-          transition: all 0.3s ease;
-          cursor: pointer;
-        }
-        .swiper-bullet-active {
-          width: 24px;
-          background: #fff;
-          opacity: 1;
-        }
-        .dark .swiper-bullet {
-          background: rgba(255, 255, 255, 0.25);
-        }
-        .dark .swiper-bullet-active {
-          background: #ffffff;
-        }
-      `}</style>
-    </motion.div>
+        </div>
+      </div>
+    </section>
   );
 };
 

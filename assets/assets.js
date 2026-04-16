@@ -17,19 +17,31 @@ import screenChatbot from './screen Chatbot.png';
 import screenDashboard from './screen Dashboard.png';
 
 export const workData = [
-    {
-        title: 'AI ChatBot',
-        description: 'AI-Powered conversational interface built with React and API integration.',
-        bgImage: screenChatbot, 
-        link: 'https://ai-chatbot-one-blue-38.vercel.app'
-    },
-    {
-        title: 'Admin Dashboard',
-        description: 'Modern analytics dashboard featuring Shadcn/UI and Next.js performance.',
-        bgImage: screenDashboard, 
-        link: 'https://next16-shadcn-dashboard.vercel.app'
-      },
-   
+  {
+    title: 'AI ChatBot',
+    description: 'AI-Powered conversational interface built with React and API integration.',
+    bgImage: screenChatbot,
+    link: 'https://ai-chatbot-one-blue-38.vercel.app',
+    type: 'AI · Web App',
+    tags: [
+      { name: 'React',    level: 5 },
+      { name: 'Tailwind', level: 4 },
+      { name: 'Ngrok',    level: 3 },
+    ],
+  },
+  {
+    title: 'Admin Dashboard',
+    description: 'Modern analytics dashboard featuring Shadcn/UI and Next.js performance.',
+    bgImage: screenDashboard,
+    link: 'https://next16-shadcn-dashboard.vercel.app',
+    type: 'Dashboard · UI',
+    tags: [
+      { name: 'Next.js',  level: 5 },
+      { name: 'React',    level: 5 },
+      { name: 'Shadcn',   level: 4 },
+      { name: 'Tailwind', level: 4 },
+    ],
+  },
 ];
 export const serviceData = [
   {
