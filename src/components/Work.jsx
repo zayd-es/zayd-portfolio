@@ -132,7 +132,7 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="relative w-full px-4 py-16 sm:py-24 overflow-hidden bg-white dark:bg-[#0a0614] transition-colors duration-500"
+      className="relative w-full px-4 py-16 sm:py-24 overflow-hidden  transition-colors duration-500"
     >
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center">
         <div className="text-center mb-10 sm:mb-16">
