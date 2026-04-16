@@ -43,9 +43,9 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="w-fit mx-auto lg:mx-0 shrink-0"
         >
-          <div className="w-[260px] sm:w-[300px] md:w-[380px] mx-auto lg:mx-0 shadow-2xl shadow-blue-500/5 rounded-3xl">
+          <div className="w-[260px]  sm:w-[300px] md:w-[380px] mx-auto lg:mx-0 shadow-2xl shadow-blue-500/5 rounded-3xl">
             <ProfileCard
-              name="Zayd Elabbous"
+              name={<div className="pb-3">Zayd Elabbous</div>}
               title="Front-end Developer"
               status="Online"
               avatarUrl="/meZayd.jpeg"

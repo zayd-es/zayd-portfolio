@@ -106,7 +106,7 @@ const Header = () => {
         </h3>
 
         <h1 className="font-ovo text-5xl sm:text-7xl lg:text- leading-[1] tracking-tight dark:text-white flex flex-col items-center">
-          <div className="text-gray-900 dark:text-white h- sm:h- lg:h- flex items-center">
+          <div className="text-gray-900 mt-10 dark:text-white h- sm:h- lg:h- flex items-center">
             <TypeAnimation
               sequence={["Front End", 2000, "React.js", 2000, "Next.js", 2000]}
               wrapper="span"
@@ -118,7 +118,7 @@ const Header = () => {
           <motion.span
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
             transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
-            className="relative inline-block bg-gradient-to-r from-blue-600 via-purple-500 to-indigo-400 bg-[length:200%_auto] bg-clip-text text-transparent font-serif italic py-2"
+            className="relative inline-block  bg-gradient-to-r from-blue-600 via-purple-500 to-indigo-400 bg-[length:200%_auto] bg-clip-text text-transparent font-serif italic py-2"
           >
             Developer
           </motion.span>
