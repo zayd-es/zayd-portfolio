@@ -15,7 +15,7 @@ import {  Laptop, Terminal, Rocket } from "lucide-react";
 
 import screenChatbot from './screen Chatbot.png';
 import screenDashboard from './screen Dashboard.png';
-
+import screenElchapo from './screen ELchapo.png';
 export const workData = [
   {
     title: 'AI ChatBot',
@@ -42,6 +42,19 @@ export const workData = [
       { name: 'Tailwind', level: 4 },
     ],
   },
+  {
+  title: 'ElChapo Store',
+  description: 'Full e-commerce store built with Next.js, Sanity CMS and deployed on a custom .ma domain.',
+  bgImage: screenElchapo, 
+  link: 'https://elchapo44.ma',
+  type: 'E-commerce · Web App',
+  tags: [
+    { name: 'Next.js',  level: 5 },
+    { name: 'Sanity Cms',   level: 4 },
+    { name: 'Tailwind', level: 4 },
+    { name: 'Vercel',   level: 3 },
+  ],
+},
 ];
 export const serviceData = [
   {
