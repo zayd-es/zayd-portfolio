@@ -11,6 +11,7 @@ import { Providers } from "@/components/providers/providers";
 import { profile } from "@/data/profile";
 import { getDirection, routing, type Locale } from "@/i18n/routing";
 import { languageAlternates, localePath, siteUrl } from "@/lib/site";
+import { Suspense } from "react";
 import "../globals.css";
 
 const display = Instrument_Serif({
@@ -42,6 +43,10 @@ const ogLocales: Record<Locale, string> = {
   es: "es_ES",
   de: "de_DE",
 };
+
+// Only the configured locales match this segment; anything else (e.g. /x.txt)
+// falls through to app/global-not-found.tsx.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -116,7 +121,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
             <Preloader />
             <Header />
             <main id="content">{children}</main>
-            <Footer />
+            <Suspense>
+              <Footer />
+            </Suspense>
             <Cursor />
           </Providers>
         </NextIntlClientProvider>
