@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Zayd Elabbous — Portfolio
 
-## Getting Started
+Personal portfolio built with Next.js 16 (App Router), TypeScript and Tailwind CSS 4.
+Motion, GSAP + ScrollTrigger, Lenis and React Three Fiber for the animations, next-intl
+for 5 languages (EN, FR, AR with RTL, ES, DE), and Resend for the contact form.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # then fill in the values
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts: `npm run build`, `npm start`, `npm run lint`, `npm run typecheck`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Name | Required | Purpose |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | yes | Public URL, used for metadata, hreflang, sitemap and OG images |
+| `RESEND_API_KEY` | for the contact form | Resend API key (server only) |
+| `CONTACT_FROM_EMAIL` | no | Sender, e.g. `Zayd <hello@your-domain.com>` once a domain is verified in Resend. Defaults to `onboarding@resend.dev`, which only delivers to your Resend account email |
 
-## Learn More
+## Add a project
 
-To learn more about Next.js, take a look at the following resources:
+1. Put a 16:10 cover image in `src/assets/projects/` (e.g. `my-project.jpg`, ~1600×1000).
+2. Add an entry to `src/data/projects.ts` (`slug`, `title`, `cover`, `stack`, `links`, optional `featured` / `draft`).
+3. Add its texts under `projects.items.<slug>` in **every** file in `messages/`
+   (`category`, `role`, `summary`, `description`, `highlights` array).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The card, the detail page (`/projects/<slug>`), the sitemap entry and the next-project link are generated automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Add a language
 
-## Deploy on Vercel
+1. Add the code to `locales` in `src/i18n/routing.ts`, and its name to `localeNames`
+   (and to `rtlLocales` if it's right-to-left).
+2. Copy `messages/en.json` to `messages/<code>.json` and translate it.
+3. Add its Open Graph locale to `ogLocales` in `src/app/[locale]/layout.tsx`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Resume
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Put the PDF in `public/` and set `resume: "/your-file.pdf"` in `src/data/profile.ts`: a download button appears in the About section.
+
+## Project structure
+
+```
+messages/                 translations (one JSON per language)
+src/app/[locale]/         pages, layout, OG image, 404
+src/app/api/contact/      contact form endpoint (Resend + rate limit)
+src/components/           sections (hero, about, skills, projects, services, contact) + layout & motion primitives
+src/data/                 profile, skills, projects, services
+src/i18n/                 next-intl routing and request config
+src/proxy.ts              locale detection / redirects
+```
