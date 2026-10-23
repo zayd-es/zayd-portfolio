@@ -14,7 +14,7 @@ export function PillLink({ variant = "solid", className, children, ...props }: P
           "group relative inline-flex h-14 items-center gap-3 overflow-hidden rounded-full ps-7 pe-2 text-base font-medium isolate",
           "transition-colors duration-500 ease-out-expo",
           variant === "solid"
-            ? "bg-accent text-[#120e0c] hover:text-bg"
+            ? "bg-accent text-on-accent hover:text-bg"
             : "border border-line text-fg hover:text-bg",
           className,
         )}
@@ -38,7 +38,7 @@ export function PillLink({ variant = "solid", className, children, ...props }: P
         <span
           className={cn(
             "grid size-10 place-items-center rounded-full transition-transform duration-500 ease-out-expo group-hover:rotate-45 rtl:-scale-x-100",
-            variant === "solid" ? "bg-[#120e0c] text-accent" : "bg-accent text-[#120e0c]",
+            variant === "solid" ? "bg-on-accent text-accent" : "bg-accent text-on-accent",
           )}
         >
           <ArrowUpRight aria-hidden className="size-4" />

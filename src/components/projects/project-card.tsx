@@ -29,16 +29,16 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           />
 
           {/* Hover preview: stack slides up over the cover */}
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 flex translate-y-3 flex-wrap gap-2 bg-gradient-to-t from-[#120e0c]/85 to-transparent p-5 pt-16 opacity-0 transition-[opacity,translate] duration-500 ease-out-expo group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 md:p-7">
+          <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 flex translate-y-3 flex-wrap gap-2 bg-gradient-to-t from-black/80 to-transparent p-5 pt-16 opacity-0 transition-[opacity,translate] duration-500 ease-out-expo group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 md:p-7">
             {project.stack.slice(0, featured ? 8 : 4).map((s) => (
-              <span key={s} className="rounded-full border border-white/20 bg-black/30 px-3 py-1 text-xs text-[#f5ede3] backdrop-blur-md">
+              <span key={s} className="rounded-full border border-white/20 bg-black/30 px-3 py-1 text-xs text-white/90 backdrop-blur-md">
                 {s}
               </span>
             ))}
           </div>
 
           {featured && (
-            <span className="absolute end-5 bottom-5 rounded-full bg-accent px-3.5 py-1.5 text-xs font-medium text-[#120e0c] transition-opacity duration-300 group-hover:opacity-0 md:end-7 md:bottom-7">
+            <span className="absolute end-5 bottom-5 rounded-full bg-accent px-3.5 py-1.5 text-xs font-medium text-on-accent transition-opacity duration-300 group-hover:opacity-0 md:end-7 md:bottom-7">
               {t("featured")}
             </span>
           )}
@@ -56,7 +56,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             {project.title}
           </h3>
         </div>
-        <span className="mt-1 grid size-12 shrink-0 place-items-center rounded-full border border-line transition-[background-color,color,rotate] duration-500 ease-out-expo group-hover:rotate-45 group-hover:bg-accent group-hover:text-[#120e0c] rtl:-scale-x-100">
+        <span className="mt-1 grid size-12 shrink-0 place-items-center rounded-full border border-line transition-[background-color,color,rotate] duration-500 ease-out-expo group-hover:rotate-45 group-hover:bg-accent group-hover:text-on-accent rtl:-scale-x-100">
           <ArrowUpRight aria-hidden className="size-5" />
         </span>
       </div>

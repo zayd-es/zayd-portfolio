@@ -30,7 +30,7 @@ export function SkillCard({
 
       <div className="flex items-start justify-between">
         <span className="font-display text-3xl text-accent italic">0{index + 1}</span>
-        <span className="grid size-14 place-items-center rounded-full border border-line transition-[background-color,color,rotate] duration-500 group-hover:rotate-[-12deg] group-hover:bg-accent group-hover:text-[#120e0c]">
+        <span className="grid size-14 place-items-center rounded-full border border-line transition-[background-color,color,rotate] duration-500 group-hover:rotate-[-12deg] group-hover:bg-accent group-hover:text-on-accent">
           <Icon aria-hidden className="size-6" />
         </span>
       </div>
@@ -44,7 +44,7 @@ export function SkillCard({
             return (
               <li
                 key={label}
-                className="rounded-full border border-line px-3.5 py-1.5 text-sm transition-colors duration-300 hover:border-accent hover:bg-accent hover:text-[#120e0c]"
+                className="rounded-full border border-line px-3.5 py-1.5 text-sm transition-colors duration-300 hover:border-accent hover:bg-accent hover:text-on-accent"
               >
                 {label}
               </li>

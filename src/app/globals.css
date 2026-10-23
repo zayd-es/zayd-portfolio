@@ -2,37 +2,34 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-/* ---------- Ember tokens ---------- */
+/* ---------- Champagne tokens ---------- */
 :root,
 [data-theme="dark"] {
-  --bg: #120e0c;
-  --bg-elevated: #1c1613;
-  --fg: #f5ede3;
-  --muted: rgb(245 237 227 / 0.62);
-  --line: rgb(245 237 227 / 0.12);
-  --accent: #ff5a1f;
-  --accent-soft: rgb(255 90 31 / 0.16);
-  --cream: #f2d7b6;
-  --glow-1: #ff5a1f;
-  --glow-2: #b8341a;
-  --glow-3: #f2d7b6;
-  --grain-opacity: 0.07;
+  --bg: #0e0d0b;
+  --bg-elevated: #191714;
+  --fg: #f2ede4;
+  --muted: rgb(242 237 228 / 0.62);
+  --line: rgb(242 237 228 / 0.12);
+  --accent: #c8a96a;
+  --accent-soft: rgb(200 169 106 / 0.14);
+  /* Text/icons placed on an accent background. */
+  --on-accent: #0e0d0b;
+  --cream: #e6d5b0;
+  --grain-opacity: 0.06;
   color-scheme: dark;
 }
 
 [data-theme="light"] {
-  --bg: #faf4ea;
-  --bg-elevated: #f3e9da;
-  --fg: #1a1210;
-  --muted: rgb(26 18 16 / 0.66);
-  --line: rgb(26 18 16 / 0.12);
-  --accent: #e8470f;
-  --accent-soft: rgb(232 71 15 / 0.12);
-  --cream: #a8643a;
-  --glow-1: #ff8a4c;
-  --glow-2: #ffc9a1;
-  --glow-3: #f6b98f;
-  --grain-opacity: 0.05;
+  --bg: #f7f3ec;
+  --bg-elevated: #efe8dc;
+  --fg: #16130f;
+  --muted: rgb(22 19 15 / 0.66);
+  --line: rgb(22 19 15 / 0.12);
+  --accent: #7e6029;
+  --accent-soft: rgb(126 96 41 / 0.12);
+  --on-accent: #f7f3ec;
+  --cream: #7a5c28;
+  --grain-opacity: 0.04;
   color-scheme: light;
 }
 
@@ -44,6 +41,7 @@
   --color-line: var(--line);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
   --color-cream: var(--cream);
 
   --font-sans: var(--font-inter-tight), var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
@@ -71,7 +69,7 @@
 
   ::selection {
     background: var(--accent);
-    color: #120e0c;
+    color: var(--on-accent);
   }
 
   :focus-visible {
@@ -121,26 +119,6 @@ html.has-custom-cursor button {
   z-index: 60;
   opacity: var(--grain-opacity);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* ---------- Warm blobs (hero background + 3D fallback) ---------- */
-.ember-blob {
-  border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
-  background:
-    radial-gradient(circle at 30% 28%, var(--glow-3) 0%, transparent 38%),
-    radial-gradient(circle at 70% 70%, var(--glow-2) 0%, transparent 55%),
-    radial-gradient(circle at 50% 50%, var(--glow-1) 0%, var(--glow-2) 70%);
-  box-shadow:
-    inset -30px -40px 80px rgb(0 0 0 / 0.35),
-    inset 30px 30px 60px rgb(255 255 255 / 0.18),
-    0 40px 120px -20px var(--accent-soft);
-  animation: blob-morph 14s ease-in-out infinite alternate;
-}
-
-@keyframes blob-morph {
-  0% { border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%; transform: rotate(0deg); }
-  50% { border-radius: 58% 42% 38% 62% / 55% 61% 39% 45%; }
-  100% { border-radius: 37% 63% 51% 49% / 37% 35% 65% 63%; transform: rotate(18deg); }
 }
 
 @keyframes pulse-dot {

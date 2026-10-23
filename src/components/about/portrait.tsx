@@ -39,7 +39,7 @@ export function Portrait({ alt, className }: { alt: string; className?: string }
         {/* Warm ember tint */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-[linear-gradient(to_top,rgb(18_14_12/0.55),transparent_45%),radial-gradient(circle_at_80%_10%,rgb(255_90_31/0.25),transparent_55%)]"
+          className="absolute inset-0 bg-[linear-gradient(to_top,rgb(14_13_11/0.55),transparent_45%),radial-gradient(circle_at_80%_10%,rgb(200_169_106/0.22),transparent_55%)]"
         />
       </motion.figure>
 

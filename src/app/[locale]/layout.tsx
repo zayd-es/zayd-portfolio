@@ -48,8 +48,8 @@ export function generateStaticParams() {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#120e0c" },
-    { media: "(prefers-color-scheme: light)", color: "#faf4ea" },
+    { media: "(prefers-color-scheme: dark)", color: "#0e0d0b" },
+    { media: "(prefers-color-scheme: light)", color: "#f7f3ec" },
   ],
 };
 
@@ -108,7 +108,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
           <Providers>
             <a
               href="#content"
-              className="fixed top-3 start-3 z-[120] -translate-y-20 rounded-full bg-accent px-5 py-3 text-sm font-medium text-[#120e0c] transition-transform focus:translate-y-0"
+              className="fixed top-3 start-3 z-[120] -translate-y-20 rounded-full bg-accent px-5 py-3 text-sm font-medium text-on-accent transition-transform focus:translate-y-0"
             >
               {t("skip")}
             </a>

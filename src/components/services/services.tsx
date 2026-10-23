@@ -52,27 +52,27 @@ export function Services() {
                 aria-hidden
                 className="absolute inset-0 -z-10 origin-bottom scale-y-0 bg-accent transition-transform duration-700 ease-out-expo group-hover:scale-y-100"
               />
-              <div className="grid grid-cols-[auto_1fr_auto] items-start gap-x-5 gap-y-3 px-1 py-8 transition-[padding,color] duration-700 ease-out-expo group-hover:text-[#120e0c] md:grid-cols-[4rem_1fr_minmax(0,22rem)_auto] md:items-center md:gap-x-8 md:py-10 md:group-hover:ps-6 md:group-hover:pe-4">
-                <span className="font-display text-xl text-accent italic transition-colors duration-700 group-hover:text-[#120e0c] md:text-2xl">
+              <div className="grid grid-cols-[auto_1fr_auto] items-start gap-x-5 gap-y-3 px-1 py-8 transition-[padding,color] duration-700 ease-out-expo group-hover:text-on-accent md:grid-cols-[4rem_1fr_minmax(0,22rem)_auto] md:items-center md:gap-x-8 md:py-10 md:group-hover:ps-6 md:group-hover:pe-4">
+                <span className="font-display text-xl text-accent italic transition-colors duration-700 group-hover:text-on-accent md:text-2xl">
                   0{i + 1}
                 </span>
 
                 <div>
                   <h3 className="font-display text-[clamp(2rem,4.2vw,3.75rem)] leading-none">{t(`items.${id}.title`)}</h3>
                   {main && (
-                    <span className="mt-3 inline-block rounded-full border border-accent px-3 py-1 text-xs text-accent transition-colors duration-700 group-hover:border-[#120e0c] group-hover:text-[#120e0c]">
+                    <span className="mt-3 inline-block rounded-full border border-accent px-3 py-1 text-xs text-accent transition-colors duration-700 group-hover:border-on-accent group-hover:text-on-accent">
                       {t("main")}
                     </span>
                   )}
                 </div>
 
-                <p className="col-span-full col-start-2 leading-relaxed text-pretty text-muted transition-colors duration-700 group-hover:text-[#120e0c]/80 md:col-span-1 md:col-start-auto">
+                <p className="col-span-full col-start-2 leading-relaxed text-pretty text-muted transition-colors duration-700 group-hover:text-on-accent/80 md:col-span-1 md:col-start-auto">
                   {t(`items.${id}.description`)}
                 </p>
 
                 <span
                   aria-hidden
-                  className="relative col-start-3 row-start-1 grid size-12 place-items-center rounded-full border border-line transition-[border-color,rotate,background-color,color] duration-700 ease-out-expo group-hover:rotate-45 group-hover:border-transparent group-hover:bg-[#120e0c] group-hover:text-accent md:col-start-auto md:row-start-auto md:size-14"
+                  className="relative col-start-3 row-start-1 grid size-12 place-items-center rounded-full border border-line transition-[border-color,rotate,background-color,color] duration-700 ease-out-expo group-hover:rotate-45 group-hover:border-transparent group-hover:bg-on-accent group-hover:text-accent md:col-start-auto md:row-start-auto md:size-14"
                 >
                   <Icon className="size-5 transition-opacity duration-300 group-hover:opacity-0" />
                   <ArrowUpRight className="absolute size-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

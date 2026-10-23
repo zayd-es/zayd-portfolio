@@ -183,13 +183,13 @@ export function ContactForm() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="group relative inline-flex h-14 items-center gap-3 overflow-hidden rounded-full bg-accent ps-7 pe-2 font-medium text-[#120e0c] isolate disabled:opacity-70"
+                className="group relative inline-flex h-14 items-center gap-3 overflow-hidden rounded-full bg-accent ps-7 pe-2 font-medium text-on-accent isolate disabled:opacity-70"
               >
                 <span aria-hidden className="absolute inset-0 -z-10 translate-y-full rounded-[inherit] bg-fg transition-transform duration-500 ease-out-expo group-hover:translate-y-0" />
                 <span className="transition-colors duration-500 group-hover:text-bg">
                   {status === "sending" ? t("sending") : t("send")}
                 </span>
-                <span className="grid size-10 place-items-center rounded-full bg-[#120e0c] text-accent">
+                <span className="grid size-10 place-items-center rounded-full bg-on-accent text-accent">
                   {status === "sending" ? (
                     <LoaderCircle aria-hidden className="size-4 animate-spin" />
                   ) : (

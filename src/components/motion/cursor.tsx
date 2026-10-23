@@ -67,7 +67,7 @@ function CursorDot() {
       <motion.div
         className={
           isLabel
-            ? "grid h-full w-full place-items-center rounded-full bg-accent text-[#120e0c]"
+            ? "grid h-full w-full place-items-center rounded-full bg-accent text-on-accent"
             : "h-full w-full rounded-full bg-white mix-blend-difference"
         }
         animate={{ scale: visible ? scales[mode.kind] : 0 }}
