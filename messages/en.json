@@ -51,5 +51,33 @@
       "languages": "Languages this site speaks",
       "reviewed": "Of my code reviewed line by line"
     }
+  },
+  "skills": {
+    "label": "Skills",
+    "title": "My <em>toolkit</em>",
+    "intro": "The technologies I use every day to design, build and ship products, from the first pixel to the database.",
+    "groups": {
+      "frontend": {
+        "title": "Frontend",
+        "description": "My main specialty: fast, accessible and pixel-precise interfaces with React and Next.js."
+      },
+      "backend": {
+        "title": "Backend",
+        "description": "APIs, databases, auth and payments to turn interfaces into complete full-stack products."
+      },
+      "ai": {
+        "title": "AI Workflow",
+        "description": "AI tools that help me plan, debug and ship faster, with every line understood and reviewed."
+      },
+      "tools": {
+        "title": "Tools",
+        "description": "The everyday setup for versioning, collaborating and deploying to production."
+      }
+    },
+    "items": {
+      "prompting": "Prompt Engineering",
+      "debugging": "AI-assisted Debugging",
+      "review": "AI-assisted Code Review"
+    }
   }
 }

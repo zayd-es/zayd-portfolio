@@ -51,5 +51,33 @@
       "languages": "Langues parlées par ce site",
       "reviewed": "De mon code relu ligne par ligne"
     }
+  },
+  "skills": {
+    "label": "Compétences",
+    "title": "Ma <em>boîte à outils</em>",
+    "intro": "Les technologies que j’utilise au quotidien pour concevoir, développer et livrer des produits, du premier pixel à la base de données.",
+    "groups": {
+      "frontend": {
+        "title": "Frontend",
+        "description": "Ma spécialité : des interfaces rapides, accessibles et précises au pixel près avec React et Next.js."
+      },
+      "backend": {
+        "title": "Backend",
+        "description": "API, bases de données, authentification et paiements pour transformer une interface en produit full-stack complet."
+      },
+      "ai": {
+        "title": "Workflow IA",
+        "description": "Des outils d’IA qui m’aident à planifier, déboguer et livrer plus vite, chaque ligne étant comprise et relue."
+      },
+      "tools": {
+        "title": "Outils",
+        "description": "Mon setup quotidien pour versionner, collaborer et déployer en production."
+      }
+    },
+    "items": {
+      "prompting": "Prompt engineering",
+      "debugging": "Débogage assisté par IA",
+      "review": "Revue de code assistée par IA"
+    }
   }
 }

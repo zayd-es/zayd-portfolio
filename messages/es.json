@@ -51,5 +51,33 @@
       "languages": "Idiomas que habla este sitio",
       "reviewed": "De mi código revisado línea a línea"
     }
+  },
+  "skills": {
+    "label": "Habilidades",
+    "title": "Mi <em>caja de herramientas</em>",
+    "intro": "Las tecnologías que uso a diario para diseñar, construir y lanzar productos, del primer píxel a la base de datos.",
+    "groups": {
+      "frontend": {
+        "title": "Frontend",
+        "description": "Mi especialidad: interfaces rápidas, accesibles y precisas al píxel con React y Next.js."
+      },
+      "backend": {
+        "title": "Backend",
+        "description": "APIs, bases de datos, autenticación y pagos para convertir interfaces en productos full-stack completos."
+      },
+      "ai": {
+        "title": "Flujo con IA",
+        "description": "Herramientas de IA que me ayudan a planificar, depurar y entregar más rápido, entendiendo y revisando cada línea."
+      },
+      "tools": {
+        "title": "Herramientas",
+        "description": "Mi entorno diario para versionar, colaborar y desplegar a producción."
+      }
+    },
+    "items": {
+      "prompting": "Ingeniería de prompts",
+      "debugging": "Depuración asistida por IA",
+      "review": "Revisión de código asistida por IA"
+    }
   }
 }

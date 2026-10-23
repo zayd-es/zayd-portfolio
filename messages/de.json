@@ -51,5 +51,33 @@
       "languages": "Sprachen auf dieser Website",
       "reviewed": "Meines Codes Zeile für Zeile geprüft"
     }
+  },
+  "skills": {
+    "label": "Skills",
+    "title": "Mein <em>Werkzeugkasten</em>",
+    "intro": "Die Technologien, mit denen ich täglich Produkte entwerfe, baue und ausliefere – vom ersten Pixel bis zur Datenbank.",
+    "groups": {
+      "frontend": {
+        "title": "Frontend",
+        "description": "Mein Schwerpunkt: schnelle, barrierearme und pixelgenaue Interfaces mit React und Next.js."
+      },
+      "backend": {
+        "title": "Backend",
+        "description": "APIs, Datenbanken, Authentifizierung und Zahlungen, damit aus Interfaces komplette Full-Stack-Produkte werden."
+      },
+      "ai": {
+        "title": "KI-Workflow",
+        "description": "KI-Tools, die mir helfen, schneller zu planen, zu debuggen und auszuliefern – jede Zeile verstanden und geprüft."
+      },
+      "tools": {
+        "title": "Tools",
+        "description": "Mein tägliches Setup für Versionierung, Zusammenarbeit und Deployment."
+      }
+    },
+    "items": {
+      "prompting": "Prompt Engineering",
+      "debugging": "KI-gestütztes Debugging",
+      "review": "KI-gestütztes Code-Review"
+    }
   }
 }
