@@ -10,7 +10,7 @@ export const routing = defineRouting({
 
 export type Locale = (typeof routing.locales)[number];
 
-export const rtlLocales: readonly Locale[] = ["ar"];
+const rtlLocales: readonly Locale[] = ["ar"];
 
 export const localeNames: Record<Locale, string> = {
   en: "English",

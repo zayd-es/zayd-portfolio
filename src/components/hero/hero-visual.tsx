@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import chromeStill from "@/assets/hero-chrome.webp";
 import { useIntro } from "@/components/providers/intro-provider";
+import { useInteracted } from "@/hooks/use-interacted";
 import { useFinePointer, useMediaQuery, useReducedMotion } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 
@@ -27,7 +28,8 @@ const noop = () => () => {};
 /**
  * Gold liquid-chrome blob. Everyone first gets a still render of the scene;
  * desktop mouse users then get the live 3D version cross-faded over it (the 3D
- * chunk is only downloaded once the preloader has finished). Touch devices,
+ * chunk is only downloaded after the preloader and the first interaction, so
+ * it never competes with first paint). Touch devices,
  * small screens, reduced motion and browsers without WebGL keep the still.
  */
 export function HeroVisual({ className }: { className?: string }) {
@@ -36,7 +38,8 @@ export function HeroVisual({ className }: { className?: string }) {
   const wide = useMediaQuery("(min-width: 768px)");
   const reduced = useReducedMotion();
   const gl = useSyncExternalStore(noop, supportsWebGL, () => false);
-  const use3D = done && fine && wide && !reduced && gl;
+  const interacted = useInteracted();
+  const use3D = done && interacted && fine && wide && !reduced && gl;
 
   const ref = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
@@ -58,7 +61,9 @@ export function HeroVisual({ className }: { className?: string }) {
         src={chromeStill}
         alt=""
         fill
-        sizes="(min-width: 768px) 48vw, 95vw"
+        loading="eager"
+        fetchPriority="high"
+        sizes="(min-width: 768px) 44vw, 88vw"
         className={cn("object-contain transition-opacity duration-1000", showCanvas && "opacity-0")}
       />
       {use3D && (

@@ -50,7 +50,8 @@
       "years": "Années à créer des applications web",
       "languages": "Langues parlées par ce site",
       "reviewed": "De mon code relu ligne par ligne"
-    }
+    },
+    "resume": "Télécharger mon CV"
   },
   "skills": {
     "label": "Compétences",
@@ -215,5 +216,10 @@
     "timeTitle": "Heure locale",
     "rights": "Tous droits réservés.",
     "backToTop": "Retour en haut"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "La page que vous cherchez n’existe pas ou a été déplacée.",
+    "home": "Retour à l’accueil"
   }
 }

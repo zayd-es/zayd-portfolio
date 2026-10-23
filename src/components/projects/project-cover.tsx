@@ -11,14 +11,15 @@ export function ProjectCover({
   project,
   alt = "",
   sizes,
-  priority,
+  eager,
   className,
   imageClassName,
 }: {
   project: Project;
   alt?: string;
   sizes: string;
-  priority?: boolean;
+  /** Above-the-fold cover: load immediately with high priority. */
+  eager?: boolean;
   className?: string;
   imageClassName?: string;
 }) {
@@ -30,7 +31,8 @@ export function ProjectCover({
           alt={alt}
           fill
           sizes={sizes}
-          priority={priority}
+          loading={eager ? "eager" : undefined}
+          fetchPriority={eager ? "high" : undefined}
           placeholder="blur"
           className={cn("object-cover object-top", imageClassName)}
         />

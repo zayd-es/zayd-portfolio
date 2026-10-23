@@ -25,7 +25,7 @@ export function Preloader() {
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const controls = animate(progress, 100, {
-      duration: reduced ? 0.4 : 2,
+      duration: reduced ? 0.3 : 1.1,
       ease: [0.65, 0, 0.35, 1],
     });
     controls.then(() => {
@@ -50,7 +50,7 @@ export function Preloader() {
       className="fixed inset-0 z-[100] flex flex-col justify-between bg-bg px-4 py-6 text-fg md:px-8"
       initial={{ clipPath: "inset(0% 0% 0% 0%)" }}
       animate={exiting ? { clipPath: "inset(0% 0% 100% 0%)" } : undefined}
-      transition={{ duration: 1, ease, delay: 0.25 }}
+      transition={{ duration: 0.8, ease, delay: 0.1 }}
       onAnimationComplete={() => exiting && setPhase("gone")}
     >
       <div className="flex justify-between text-xs tracking-[0.2em] text-muted uppercase">
@@ -69,8 +69,8 @@ export function Preloader() {
               initial={{ y: "105%", opacity: 0 }}
               animate={
                 exiting
-                  ? { y: "-105%", opacity: 0, transition: { duration: 0.6, delay: i * 0.015, ease } }
-                  : { y: "0%", opacity: 1, transition: { duration: 0.9, delay: 0.15 + i * 0.07, ease: [0.16, 1, 0.3, 1] } }
+                  ? { y: "-105%", opacity: 0, transition: { duration: 0.5, delay: i * 0.01, ease } }
+                  : { y: "0%", opacity: 1, transition: { duration: 0.7, delay: 0.05 + i * 0.04, ease: [0.16, 1, 0.3, 1] } }
               }
             >
               {c === " " ? " " : c}

@@ -50,7 +50,8 @@
       "years": "Jahre Erfahrung mit Web-Apps",
       "languages": "Sprachen auf dieser Website",
       "reviewed": "Meines Codes Zeile für Zeile geprüft"
-    }
+    },
+    "resume": "Lebenslauf herunterladen"
   },
   "skills": {
     "label": "Skills",
@@ -215,5 +216,10 @@
     "timeTitle": "Ortszeit",
     "rights": "Alle Rechte vorbehalten.",
     "backToTop": "Nach oben"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "body": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "home": "Zur Startseite"
   }
 }

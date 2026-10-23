@@ -44,7 +44,7 @@ export function Hero() {
       {/* Warm ambient glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-[30vmax] start-[10%] -z-10 size-[80vmax] rounded-full bg-[radial-gradient(circle,var(--accent-soft)_0%,transparent_60%)] blur-2xl"
+        className="pointer-events-none absolute -top-[30vmax] start-[10%] -z-10 size-[80vmax] rounded-full bg-[radial-gradient(circle,var(--accent-soft)_0%,transparent_60%)]"
       />
 
       <motion.div
@@ -69,8 +69,8 @@ export function Hero() {
           className="absolute top-[24%] end-[-24%] w-[88vw] -translate-y-1/2 sm:end-[-8%] sm:w-[70vw] md:top-1/2 md:end-[4%] md:w-[44vw] md:max-w-[700px] md:-translate-y-[64%]"
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.6 }}
-            animate={done ? { opacity: 1, scale: 1 } : undefined}
+            initial={{ scale: 0.6 }}
+            animate={done ? { scale: 1 } : undefined}
             transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           >
             <HeroVisual />

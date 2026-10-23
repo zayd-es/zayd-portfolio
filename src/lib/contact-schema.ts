@@ -13,7 +13,6 @@ export const contactSchema = z.object({
   company: z.string().max(200).optional(),
 });
 
-export type ContactInput = z.input<typeof contactSchema>;
 export type ContactField = "name" | "email" | "message";
 
 /** Error codes returned by POST /api/contact (also translation keys). */

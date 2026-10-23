@@ -15,6 +15,9 @@
   /* Text/icons placed on an accent background. */
   --on-accent: #0e0d0b;
   --cream: #e6d5b0;
+  /* Lowest opacity of scroll-revealed words that still meets 3:1 contrast. */
+  --reveal-from: 0.38;
+  --reveal-from-accent: 0.53;
   --grain-opacity: 0.06;
   color-scheme: dark;
 }
@@ -29,6 +32,8 @@
   --accent-soft: rgb(126 96 41 / 0.12);
   --on-accent: #f7f3ec;
   --cream: #7a5c28;
+  --reveal-from: 0.48;
+  --reveal-from-accent: 0.74;
   --grain-opacity: 0.04;
   color-scheme: light;
 }
@@ -118,16 +123,28 @@ html.has-custom-cursor button {
   inset: 0;
   z-index: 60;
   opacity: var(--grain-opacity);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  /* A small pre-rendered tile: an SVG feTurbulence filter here cost ~400ms of first paint. */
+  background-image: url("/noise.png");
+  background-size: 128px;
 }
 
-@keyframes pulse-dot {
-  0% { box-shadow: 0 0 0 0 var(--accent); }
-  70%, 100% { box-shadow: 0 0 0 8px transparent; }
+/* Ring animated with transform/opacity only, so it stays on the compositor. */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.7; }
+  70%, 100% { transform: scale(3); opacity: 0; }
 }
 
 .pulse-dot {
-  animation: pulse-dot 2s ease-out infinite;
+  position: relative;
+}
+
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--accent);
+  animation: pulse-ring 2s ease-out infinite;
 }
 
 @keyframes scroll-cue {

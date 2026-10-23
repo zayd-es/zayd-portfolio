@@ -50,7 +50,8 @@
       "years": "Años creando aplicaciones web",
       "languages": "Idiomas que habla este sitio",
       "reviewed": "De mi código revisado línea a línea"
-    }
+    },
+    "resume": "Descargar CV"
   },
   "skills": {
     "label": "Habilidades",
@@ -215,5 +216,10 @@
     "timeTitle": "Hora local",
     "rights": "Todos los derechos reservados.",
     "backToTop": "Volver arriba"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "body": "La página que buscas no existe o se ha movido.",
+    "home": "Volver al inicio"
   }
 }

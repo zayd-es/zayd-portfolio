@@ -1,6 +1,6 @@
 import "server-only";
 
-export type RateLimitResult = { success: boolean; retryAfter: number };
+type RateLimitResult = { success: boolean; retryAfter: number };
 
 /**
  * Minimal limiter interface, shaped like @upstash/ratelimit's `limit()` so the

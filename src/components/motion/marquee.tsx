@@ -3,6 +3,7 @@
 import {
   motion,
   useAnimationFrame,
+  useInView,
   useMotionValue,
   useScroll,
   useSpring,
@@ -37,9 +38,12 @@ export function Marquee({
   const boost = useTransform(velocity, [-1000, 0, 1000], [-4, 0, 4], { clamp: false });
   const x = useTransform(base, (v) => `${wrap(-50, 0, v)}%`);
   const direction = useRef(1);
+  const ref = useRef<HTMLDivElement>(null);
+  // No per-frame work while the band is off screen.
+  const inView = useInView(ref);
 
   useAnimationFrame((_, delta) => {
-    if (reduced) return;
+    if (reduced || !inView) return;
     const b = boost.get();
     if (b < 0) direction.current = -1;
     else if (b > 0) direction.current = 1;
@@ -48,7 +52,7 @@ export function Marquee({
   });
 
   return (
-    <div aria-hidden dir="ltr" className={cn("overflow-x-clip", className)}>
+    <div ref={ref} aria-hidden dir="ltr" className={cn("overflow-x-clip", className)}>
       <motion.div style={{ x }} className="flex w-max">
         <div className="flex shrink-0">{children}</div>
         <div className="flex shrink-0">{children}</div>

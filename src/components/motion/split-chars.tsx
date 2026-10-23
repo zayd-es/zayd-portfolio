@@ -31,7 +31,7 @@ export function SplitChars({ text, play, delay = 0, stagger = 0.045, className }
       {Array.from(text).map((c, i) => (
         <span key={i} className="-mb-[0.08em] inline-block overflow-hidden pb-[0.08em]">
           <motion.span
-            className="inline-block origin-bottom-left will-change-transform"
+            className="inline-block origin-bottom-left"
             variants={char}
             initial="hidden"
             animate={play ? "show" : "hidden"}

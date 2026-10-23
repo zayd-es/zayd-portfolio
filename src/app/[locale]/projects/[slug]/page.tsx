@@ -79,7 +79,7 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
 
           <ProjectCover
             project={project}
-            priority
+            eager
             alt={t("coverAlt", { title: project.title })}
             sizes="(min-width: 1600px) 1600px, 100vw"
             className="mt-12 aspect-[16/10] rounded-[2rem] border border-line shadow-2xl shadow-black/25 md:mt-16"

@@ -50,7 +50,8 @@
       "years": "Years building web apps",
       "languages": "Languages this site speaks",
       "reviewed": "Of my code reviewed line by line"
-    }
+    },
+    "resume": "Download resume"
   },
   "skills": {
     "label": "Skills",
@@ -215,5 +216,10 @@
     "timeTitle": "Local time",
     "rights": "All rights reserved.",
     "backToTop": "Back to top"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you’re looking for doesn’t exist or has moved.",
+    "home": "Back to home"
   }
 }

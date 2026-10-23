@@ -66,12 +66,16 @@ function Word({
   range: [number, number];
   still: boolean;
 }) {
-  const opacity = useTransform(progress, range, [0.14, 1]);
+  // 0 → 1 per word; the theme decides how dim "0" is (see --reveal-from).
+  const p = useTransform(progress, range, [0, 1]);
 
   return (
     <motion.span
-      style={{ opacity: still ? 1 : opacity }}
-      className={cn(token.em && "font-display text-accent italic")}
+      style={{ "--p": still ? 1 : p } as Record<string, unknown>}
+      className={cn(
+        "[--from:var(--reveal-from)] [opacity:calc(var(--from)+(1-var(--from))*var(--p,1))]",
+        token.em && "font-display text-accent italic [--from:var(--reveal-from-accent)]",
+      )}
     >
       {token.word}
     </motion.span>

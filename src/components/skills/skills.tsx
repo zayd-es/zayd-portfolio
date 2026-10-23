@@ -6,6 +6,7 @@ import { Fragment, useEffect, useRef } from "react";
 import { Marquee } from "@/components/motion/marquee";
 import { SectionLabel } from "@/components/ui/section-label";
 import { skillGroups } from "@/data/skills";
+import { useInteracted } from "@/hooks/use-interacted";
 import { getDirection, type Locale } from "@/i18n/routing";
 import { SkillCard } from "./skill-card";
 
@@ -18,11 +19,16 @@ export function Skills() {
   const pinRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
+  const interacted = useInteracted();
 
   // Pinned horizontal scroll on desktop. GSAP is only downloaded here.
   useEffect(() => {
     let revert: (() => void) | undefined;
     let cancelled = false;
+    // Phones, tablets and reduced motion never pin: skip downloading GSAP.
+    // Elsewhere, wait for the first interaction so it doesn't compete with load
+    // (scrolling counts, so the pin is ready long before this section).
+    if (!interacted || !window.matchMedia(PIN_QUERY).matches) return;
 
     (async () => {
       const [{ gsap }, { ScrollTrigger }] = await Promise.all([
@@ -64,7 +70,7 @@ export function Skills() {
       cancelled = true;
       revert?.();
     };
-  }, [rtl]);
+  }, [rtl, interacted]);
 
   const words = skillGroups.flatMap((g) => g.skills.map((s) => ("name" in s ? s.name : t(`items.${s.key}`))));
   const half = Math.ceil(words.length / 2);
