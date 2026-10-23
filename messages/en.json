@@ -141,5 +141,36 @@
         "highlights": []
       }
     }
+  },
+  "services": {
+    "label": "Services",
+    "title": "What I <em>do</em>",
+    "intro": "From a single landing page to a complete product, I take care of the build end to end.",
+    "ai": "Delivered faster with an AI-assisted workflow.",
+    "aiDetail": "Claude Code helps me plan, debug and review, and I check every line before it ships.",
+    "cta": "Start a project",
+    "main": "Main specialty",
+    "items": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Fast, accessible and maintainable web apps with React and Next.js, built with clean, typed code."
+      },
+      "fullstack": {
+        "title": "Full-Stack Development",
+        "description": "APIs, databases, authentication and payments, so your product works end to end."
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Layouts that look and work great on every screen, from small phones to wide desktops."
+      },
+      "uiux": {
+        "title": "Modern UI/UX & Animation",
+        "description": "Interfaces that feel alive: smooth motion, micro-interactions and thoughtful details."
+      },
+      "figma": {
+        "title": "Figma to Code",
+        "description": "Your Figma designs turned into pixel-perfect, responsive and interactive components."
+      }
+    }
   }
 }

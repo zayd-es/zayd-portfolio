@@ -141,5 +141,36 @@
         "highlights": []
       }
     }
+  },
+  "services": {
+    "label": "Leistungen",
+    "title": "Was ich <em>mache</em>",
+    "intro": "Von der einzelnen Landingpage bis zum kompletten Produkt – ich übernehme die Umsetzung von Anfang bis Ende.",
+    "ai": "Schneller geliefert dank KI-gestütztem Workflow.",
+    "aiDetail": "Claude Code hilft mir beim Planen, Debuggen und Reviewen – und ich prüfe jede Zeile, bevor sie live geht.",
+    "cta": "Projekt starten",
+    "main": "Hauptschwerpunkt",
+    "items": {
+      "frontend": {
+        "title": "Frontend-Entwicklung",
+        "description": "Schnelle, barrierearme und wartbare Web-Apps mit React und Next.js – mit sauberem, typisiertem Code."
+      },
+      "fullstack": {
+        "title": "Full-Stack-Entwicklung",
+        "description": "APIs, Datenbanken, Authentifizierung und Zahlungen, damit dein Produkt durchgängig funktioniert."
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Layouts, die auf jedem Bildschirm gut aussehen und funktionieren – vom Smartphone bis zum großen Monitor."
+      },
+      "uiux": {
+        "title": "Modernes UI/UX & Animation",
+        "description": "Interfaces, die lebendig wirken: flüssige Bewegungen, Micro-Interactions und durchdachte Details."
+      },
+      "figma": {
+        "title": "Von Figma zu Code",
+        "description": "Deine Figma-Designs als pixelgenaue, responsive und interaktive Komponenten umgesetzt."
+      }
+    }
   }
 }
