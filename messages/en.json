@@ -172,5 +172,37 @@
         "description": "Your Figma designs turned into pixel-perfect, responsive and interactive components."
       }
     }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let’s build something <em>together.</em>",
+    "intro": "Have a project, a freelance mission or just a question? Send me a message and I’ll get back to you.",
+    "emailLabel": "Email",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "socials": "Elsewhere",
+    "based": "Based in Tetouan, Morocco",
+    "fields": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Tell me about your project"
+    },
+    "send": "Send message",
+    "sending": "Sending…",
+    "successTitle": "Message sent!",
+    "successBody": "Thanks for reaching out. I’ll reply to your email as soon as I can.",
+    "again": "Send another message",
+    "errors": {
+      "nameShort": "Please enter your name.",
+      "nameLong": "That name is a bit too long.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageShort": "Your message should be at least 10 characters.",
+      "messageLong": "Your message is too long (5000 characters max).",
+      "invalid": "Something in the form isn’t right. Please check it and try again.",
+      "rateLimited": "Too many messages in a short time. Please try again in a few minutes.",
+      "notConfigured": "The contact form isn’t available right now. Please email me directly.",
+      "server": "The message couldn’t be sent. Please try again or email me directly.",
+      "network": "Network error. Check your connection and try again."
+    }
   }
 }

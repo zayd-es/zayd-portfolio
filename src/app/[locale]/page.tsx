@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { About } from "@/components/about/about";
+import { Contact } from "@/components/contact/contact";
 import { Hero } from "@/components/hero/hero";
 import { PageTransition } from "@/components/layout/page-transition";
 import { Projects } from "@/components/projects/projects";
@@ -18,6 +19,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <Skills />
       <Projects />
       <Services />
+      <Contact />
     </PageTransition>
   );
 }

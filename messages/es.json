@@ -172,5 +172,37 @@
         "description": "Tus diseños de Figma convertidos en componentes fieles al píxel, responsivos e interactivos."
       }
     }
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "Construyamos algo <em>juntos.</em>",
+    "intro": "¿Tienes un proyecto, un encargo freelance o simplemente una pregunta? Escríbeme y te responderé.",
+    "emailLabel": "Correo",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "socials": "En otros sitios",
+    "based": "En Tetuán, Marruecos",
+    "fields": {
+      "name": "Tu nombre",
+      "email": "Tu correo",
+      "message": "Cuéntame sobre tu proyecto"
+    },
+    "send": "Enviar mensaje",
+    "sending": "Enviando…",
+    "successTitle": "¡Mensaje enviado!",
+    "successBody": "Gracias por escribir. Te responderé por correo lo antes posible.",
+    "again": "Enviar otro mensaje",
+    "errors": {
+      "nameShort": "Por favor, escribe tu nombre.",
+      "nameLong": "Ese nombre es demasiado largo.",
+      "emailInvalid": "Por favor, introduce un correo válido.",
+      "messageShort": "Tu mensaje debe tener al menos 10 caracteres.",
+      "messageLong": "Tu mensaje es demasiado largo (máx. 5000 caracteres).",
+      "invalid": "Algo en el formulario no es correcto. Revísalo e inténtalo de nuevo.",
+      "rateLimited": "Demasiados mensajes en poco tiempo. Inténtalo de nuevo en unos minutos.",
+      "notConfigured": "El formulario no está disponible ahora mismo. Escríbeme directamente por correo.",
+      "server": "No se pudo enviar el mensaje. Inténtalo de nuevo o escríbeme directamente.",
+      "network": "Error de red. Revisa tu conexión e inténtalo de nuevo."
+    }
   }
 }

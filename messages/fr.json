@@ -172,5 +172,37 @@
         "description": "Vos maquettes Figma transformées en composants fidèles au pixel près, responsives et interactifs."
       }
     }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Construisons quelque chose <em>ensemble.</em>",
+    "intro": "Un projet, une mission freelance ou simplement une question ? Envoyez-moi un message, je vous répondrai.",
+    "emailLabel": "E-mail",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "socials": "Ailleurs",
+    "based": "Basé à Tétouan, au Maroc",
+    "fields": {
+      "name": "Votre nom",
+      "email": "Votre e-mail",
+      "message": "Parlez-moi de votre projet"
+    },
+    "send": "Envoyer le message",
+    "sending": "Envoi…",
+    "successTitle": "Message envoyé !",
+    "successBody": "Merci pour votre message. Je vous réponds par e-mail dès que possible.",
+    "again": "Envoyer un autre message",
+    "errors": {
+      "nameShort": "Veuillez indiquer votre nom.",
+      "nameLong": "Ce nom est un peu trop long.",
+      "emailInvalid": "Veuillez saisir une adresse e-mail valide.",
+      "messageShort": "Votre message doit contenir au moins 10 caractères.",
+      "messageLong": "Votre message est trop long (5000 caractères max).",
+      "invalid": "Un champ du formulaire n’est pas valide. Vérifiez-le et réessayez.",
+      "rateLimited": "Trop de messages en peu de temps. Réessayez dans quelques minutes.",
+      "notConfigured": "Le formulaire n’est pas disponible pour le moment. Écrivez-moi directement par e-mail.",
+      "server": "Le message n’a pas pu être envoyé. Réessayez ou écrivez-moi directement.",
+      "network": "Erreur réseau. Vérifiez votre connexion et réessayez."
+    }
   }
 }

@@ -172,5 +172,37 @@
         "description": "Deine Figma-Designs als pixelgenaue, responsive und interaktive Komponenten umgesetzt."
       }
     }
+  },
+  "contact": {
+    "label": "Kontakt",
+    "title": "Lass uns etwas <em>gemeinsam</em> bauen.",
+    "intro": "Du hast ein Projekt, einen Freelance-Auftrag oder einfach eine Frage? Schreib mir eine Nachricht, ich melde mich bei dir.",
+    "emailLabel": "E-Mail",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "socials": "Woanders",
+    "based": "Aus Tétouan, Marokko",
+    "fields": {
+      "name": "Dein Name",
+      "email": "Deine E-Mail",
+      "message": "Erzähl mir von deinem Projekt"
+    },
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "successTitle": "Nachricht gesendet!",
+    "successBody": "Danke für deine Nachricht. Ich antworte dir so schnell wie möglich per E-Mail.",
+    "again": "Weitere Nachricht senden",
+    "errors": {
+      "nameShort": "Bitte gib deinen Namen ein.",
+      "nameLong": "Der Name ist etwas zu lang.",
+      "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "messageShort": "Deine Nachricht sollte mindestens 10 Zeichen lang sein.",
+      "messageLong": "Deine Nachricht ist zu lang (max. 5000 Zeichen).",
+      "invalid": "Etwas im Formular stimmt nicht. Bitte prüfe es und versuche es erneut.",
+      "rateLimited": "Zu viele Nachrichten in kurzer Zeit. Bitte versuche es in ein paar Minuten erneut.",
+      "notConfigured": "Das Kontaktformular ist gerade nicht verfügbar. Schreib mir bitte direkt eine E-Mail.",
+      "server": "Die Nachricht konnte nicht gesendet werden. Versuche es erneut oder schreib mir direkt.",
+      "network": "Netzwerkfehler. Prüfe deine Verbindung und versuche es erneut."
+    }
   }
 }
