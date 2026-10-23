@@ -92,6 +92,15 @@
   }
 }
 
+/* next/font appends metric-matched Arial/Times fallbacks that contain Arabic
+   glyphs and would shadow Cairo. Drop them so Arabic falls through to Cairo
+   while Latin words keep Inter Tight / Instrument Serif. Unlayered on purpose:
+   it must beat next/font's own (unlayered) variable declarations. */
+html:lang(ar) {
+  --font-inter-tight: "Inter Tight";
+  --font-instrument: "Instrument Serif";
+}
+
 /* While the preloader runs the page must not scroll. */
 html[data-intro="running"] {
   overflow: hidden;
