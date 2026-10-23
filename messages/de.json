@@ -37,5 +37,19 @@
     "ctaWork": "Projekte ansehen",
     "ctaContact": "Lass uns reden",
     "scroll": "Scrollen zum Entdecken"
+  },
+  "about": {
+    "label": "Über mich",
+    "statement": "Frontend-Entwickler mit Fokus auf <em>React</em> und <em>Next.js</em> – ich baue schnelle, moderne und responsive Web-Apps, die sich so gut anfühlen, wie sie aussehen.",
+    "fullstack": "Ich kann auch das Backend übernehmen (APIs, Datenbanken, Authentifizierung und Zahlungen) und so komplette Full-Stack-Projekte liefern.",
+    "aiTitle": "KI-gestützter Workflow",
+    "ai": "Ich nutze täglich KI-Tools wie Claude Code, um schneller zu planen, zu debuggen und auszuliefern – und verstehe und prüfe dabei jede Zeile, die ich committe.",
+    "experience": "Seit eineinhalb Jahren entwickle ich Web-Apps, in eigenen Projekten und als Freelancer.",
+    "photoAlt": "Porträt von Zayd Elabbous",
+    "stats": {
+      "years": "Jahre Erfahrung mit Web-Apps",
+      "languages": "Sprachen auf dieser Website",
+      "reviewed": "Meines Codes Zeile für Zeile geprüft"
+    }
   }
 }
