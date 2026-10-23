@@ -27,6 +27,8 @@ export function Header() {
   return (
     <motion.header
       className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6 md:pt-4"
+      // Stays put while page content slides during navigations.
+      style={{ viewTransitionName: "site-header" }}
       initial={{ y: "-120%" }}
       animate={{ y: done && !hidden ? "0%" : "-120%" }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: done && !scrolled ? 0.6 : 0 }}

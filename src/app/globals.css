@@ -159,6 +159,11 @@ html.has-custom-cursor button {
 
 /* ---------- Theme transition ---------- */
 /* Circular reveal: the new snapshot is clipped by JS, so disable default crossfade. */
+/* The header is revealed with the page, not anchored like on navigations. */
+html.theme-vt header {
+  view-transition-name: none !important;
+}
+
 html.theme-vt::view-transition-old(root),
 html.theme-vt::view-transition-new(root) {
   animation: none;
@@ -174,6 +179,70 @@ html.theme-fade * {
     border-color 0.35s ease !important;
 }
 
+/* ---------- Page transitions (React <ViewTransition>) ---------- */
+::view-transition {
+  pointer-events: none;
+}
+
+/* Project cover morphing from card to detail page. */
+::view-transition-group(.morph) {
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+}
+::view-transition-image-pair(.morph) {
+  animation-name: via-blur;
+}
+
+/* Directional slides; "forward" follows the reading direction. */
+::view-transition-old(.nav-forward) {
+  --slide-offset: -80px;
+  animation: 200ms ease-in both vt-fade reverse, 500ms cubic-bezier(0.76, 0, 0.24, 1) both vt-slide reverse;
+}
+::view-transition-new(.nav-forward) {
+  --slide-offset: 80px;
+  animation: 300ms ease-out 200ms both vt-fade, 500ms cubic-bezier(0.76, 0, 0.24, 1) both vt-slide;
+}
+::view-transition-old(.nav-back) {
+  --slide-offset: 80px;
+  animation: 200ms ease-in both vt-fade reverse, 500ms cubic-bezier(0.76, 0, 0.24, 1) both vt-slide reverse;
+}
+::view-transition-new(.nav-back) {
+  --slide-offset: -80px;
+  animation: 300ms ease-out 200ms both vt-fade, 500ms cubic-bezier(0.76, 0, 0.24, 1) both vt-slide;
+}
+:root[dir="rtl"]::view-transition-old(.nav-forward),
+:root[dir="rtl"]::view-transition-new(.nav-back) {
+  --slide-offset: 80px;
+}
+:root[dir="rtl"]::view-transition-new(.nav-forward),
+:root[dir="rtl"]::view-transition-old(.nav-back) {
+  --slide-offset: -80px;
+}
+
+/* The header stays anchored while content moves. */
+::view-transition-group(site-header) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(site-header) {
+  display: none;
+}
+::view-transition-new(site-header) {
+  animation: none;
+}
+
+@keyframes via-blur {
+  30% { filter: blur(4px); }
+}
+@keyframes vt-fade {
+  from { opacity: 0; filter: blur(3px); }
+  to { opacity: 1; filter: blur(0); }
+}
+@keyframes vt-slide {
+  from { translate: var(--slide-offset); }
+  to { translate: 0; }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -182,5 +251,12 @@ html.theme-fade * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+  }
+
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
   }
 }
