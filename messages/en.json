@@ -204,5 +204,16 @@
       "server": "The message couldn’t be sent. Please try again or email me directly.",
       "network": "Network error. Check your connection and try again."
     }
+  },
+  "footer": {
+    "cta": "Have a project in <em>mind?</em>",
+    "ctaLink": "Let’s talk",
+    "navTitle": "Navigation",
+    "socialTitle": "Socials",
+    "contactTitle": "Contact",
+    "location": "Tetouan, Morocco",
+    "timeTitle": "Local time",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
   }
 }

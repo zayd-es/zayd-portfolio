@@ -204,5 +204,16 @@
       "server": "Le message n’a pas pu être envoyé. Réessayez ou écrivez-moi directement.",
       "network": "Erreur réseau. Vérifiez votre connexion et réessayez."
     }
+  },
+  "footer": {
+    "cta": "Un projet en <em>tête ?</em>",
+    "ctaLink": "Discutons",
+    "navTitle": "Navigation",
+    "socialTitle": "Réseaux",
+    "contactTitle": "Contact",
+    "location": "Tétouan, Maroc",
+    "timeTitle": "Heure locale",
+    "rights": "Tous droits réservés.",
+    "backToTop": "Retour en haut"
   }
 }

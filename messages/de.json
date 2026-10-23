@@ -204,5 +204,16 @@
       "server": "Die Nachricht konnte nicht gesendet werden. Versuche es erneut oder schreib mir direkt.",
       "network": "Netzwerkfehler. Prüfe deine Verbindung und versuche es erneut."
     }
+  },
+  "footer": {
+    "cta": "Ein Projekt im <em>Kopf?</em>",
+    "ctaLink": "Lass uns reden",
+    "navTitle": "Navigation",
+    "socialTitle": "Social Media",
+    "contactTitle": "Kontakt",
+    "location": "Tétouan, Marokko",
+    "timeTitle": "Ortszeit",
+    "rights": "Alle Rechte vorbehalten.",
+    "backToTop": "Nach oben"
   }
 }

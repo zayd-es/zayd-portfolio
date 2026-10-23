@@ -3,6 +3,7 @@ import { Cairo, Instrument_Serif, Inter_Tight } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Cursor } from "@/components/motion/cursor";
 import { Preloader } from "@/components/motion/preloader";
@@ -115,6 +116,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
             <Preloader />
             <Header />
             <main id="content">{children}</main>
+            <Footer />
             <Cursor />
           </Providers>
         </NextIntlClientProvider>

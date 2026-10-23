@@ -204,5 +204,16 @@
       "server": "No se pudo enviar el mensaje. Inténtalo de nuevo o escríbeme directamente.",
       "network": "Error de red. Revisa tu conexión e inténtalo de nuevo."
     }
+  },
+  "footer": {
+    "cta": "¿Tienes un proyecto en <em>mente?</em>",
+    "ctaLink": "Hablemos",
+    "navTitle": "Navegación",
+    "socialTitle": "Redes",
+    "contactTitle": "Contacto",
+    "location": "Tetuán, Marruecos",
+    "timeTitle": "Hora local",
+    "rights": "Todos los derechos reservados.",
+    "backToTop": "Volver arriba"
   }
 }
