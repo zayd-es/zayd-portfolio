@@ -79,5 +79,67 @@
       "debugging": "Débogage assisté par IA",
       "review": "Revue de code assistée par IA"
     }
+  },
+  "projects": {
+    "label": "Projets",
+    "title": "Projets <em>choisis</em>",
+    "intro": "Quelques projets que j’ai conçus, développés et livrés, des plateformes full-stack aux interfaces soignées.",
+    "view": "Voir",
+    "featured": "À la une",
+    "back": "Tous les projets",
+    "overview": "Présentation",
+    "highlights": "Points clés",
+    "role": "Rôle",
+    "stack": "Stack",
+    "live": "Voir le site",
+    "code": "Code source",
+    "next": "Projet suivant",
+    "coverAlt": "Capture d’écran de {title}",
+    "comingSoon": "L’étude de cas complète de ce projet arrive bientôt.",
+    "items": {
+      "zayd-hotels": {
+        "category": "Full-stack · Réservation",
+        "role": "Développeur full-stack",
+        "summary": "Une plateforme de réservation d’hôtels full-stack (PERN) avec paiements, tableau de bord propriétaire et avis.",
+        "description": "Zayd Hotels permet aux voyageurs de rechercher, filtrer et réserver des chambres, et offre aux propriétaires un tableau de bord pour gérer leurs établissements. Le front React communique avec une API Express reliée à PostgreSQL (Neon) via Prisma, avec Clerk pour l’authentification, Stripe pour les paiements, Cloudinary pour les images et Resend pour les e-mails.",
+        "highlights": [
+          "Filtres et pagination côté serveur",
+          "Paiement Stripe et remboursements",
+          "Tableau de bord propriétaire pour gérer hôtels et réservations",
+          "Avis avec réponses du propriétaire",
+          "Authentification avec Clerk",
+          "Upload d’images avec Cloudinary et e-mails avec Resend",
+          "Mode sombre"
+        ]
+      },
+      "ai-chatbot": {
+        "category": "IA · Application web",
+        "role": "Développeur frontend",
+        "summary": "Une interface conversationnelle propulsée par l’IA avec intégration d’API.",
+        "description": "Une interface de chat développée avec React et Tailwind CSS, connectée à un modèle d’IA via une API, exposée pendant le développement avec Ngrok.",
+        "highlights": [
+          "Interface de chat conversationnelle",
+          "Intégration d’un modèle d’IA via une API",
+          "Mise en page responsive avec Tailwind CSS"
+        ]
+      },
+      "elchapo-store": {
+        "category": "E-commerce · Application web",
+        "role": "Développeur",
+        "summary": "Une boutique en ligne développée avec Next.js et Sanity CMS, en ligne sur un domaine .ma.",
+        "description": "Une boutique en ligne développée avec Next.js et Tailwind CSS, dont le contenu est géré dans Sanity CMS, déployée sur Vercel avec un domaine .ma personnalisé.",
+        "highlights": [
+          "Contenu géré avec Sanity CMS",
+          "Déployée sur Vercel avec un domaine .ma personnalisé"
+        ]
+      },
+      "admin-dashboard": {
+        "category": "Dashboard · UI",
+        "role": "Développeur frontend",
+        "summary": "Un tableau de bord analytique moderne développé avec Next.js et shadcn/ui.",
+        "description": "Un tableau de bord d’administration et d’analyse développé avec Next.js, React, shadcn/ui et Tailwind CSS.",
+        "highlights": []
+      }
+    }
   }
 }

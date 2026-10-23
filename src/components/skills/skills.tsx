@@ -51,6 +51,13 @@ export function Skills() {
         });
       });
       revert = () => mm.revert();
+
+      // The pin spacer just shifted everything below this section: re-apply a
+      // pending #anchor (e.g. "Back to projects") so it lands in the right place.
+      const target = window.location.hash && document.querySelector(window.location.hash);
+      if (target && pinRef.current?.compareDocumentPosition(target) === Node.DOCUMENT_POSITION_FOLLOWING) {
+        target.scrollIntoView();
+      }
     })();
 
     return () => {

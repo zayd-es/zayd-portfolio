@@ -79,5 +79,67 @@
       "debugging": "KI-gestütztes Debugging",
       "review": "KI-gestütztes Code-Review"
     }
+  },
+  "projects": {
+    "label": "Projekte",
+    "title": "Ausgewählte <em>Arbeiten</em>",
+    "intro": "Einige Projekte, die ich entworfen, gebaut und ausgeliefert habe – von Full-Stack-Plattformen bis zu ausgefeilten Interfaces.",
+    "view": "Ansehen",
+    "featured": "Highlight",
+    "back": "Alle Projekte",
+    "overview": "Überblick",
+    "highlights": "Highlights",
+    "role": "Rolle",
+    "stack": "Stack",
+    "live": "Live-Website",
+    "code": "Quellcode",
+    "next": "Nächstes Projekt",
+    "coverAlt": "Screenshot von {title}",
+    "comingSoon": "Eine ausführliche Fallstudie zu diesem Projekt folgt in Kürze.",
+    "items": {
+      "zayd-hotels": {
+        "category": "Full-Stack · Buchungsplattform",
+        "role": "Full-Stack-Entwickler",
+        "summary": "Eine Full-Stack-Hotelbuchungsplattform (PERN) mit Zahlungen, Eigentümer-Dashboard und Bewertungen.",
+        "description": "Mit Zayd Hotels können Reisende Zimmer suchen, filtern und buchen, und Eigentümer verwalten ihre Unterkünfte in einem eigenen Dashboard. Das React-Frontend spricht mit einer Express-API, die über Prisma an PostgreSQL (Neon) angebunden ist – mit Clerk für die Authentifizierung, Stripe für Zahlungen, Cloudinary für Bilder und Resend für E-Mails.",
+        "highlights": [
+          "Serverseitige Filter und Paginierung",
+          "Stripe-Checkout und Rückerstattungen",
+          "Eigentümer-Dashboard für Hotels und Buchungen",
+          "Bewertungen mit Antworten der Eigentümer",
+          "Authentifizierung mit Clerk",
+          "Bild-Uploads mit Cloudinary und E-Mails mit Resend",
+          "Dark Mode"
+        ]
+      },
+      "ai-chatbot": {
+        "category": "KI · Web-App",
+        "role": "Frontend-Entwickler",
+        "summary": "Ein KI-gestütztes Chat-Interface mit API-Anbindung.",
+        "description": "Ein Chat-Interface mit React und Tailwind CSS, das über eine API an ein KI-Modell angebunden ist und während der Entwicklung über Ngrok bereitgestellt wurde.",
+        "highlights": [
+          "Konversationelles Chat-Interface",
+          "Anbindung eines KI-Modells per API",
+          "Responsives Layout mit Tailwind CSS"
+        ]
+      },
+      "elchapo-store": {
+        "category": "E-Commerce · Web-App",
+        "role": "Entwickler",
+        "summary": "Ein Onlineshop mit Next.js und Sanity CMS, live unter einer eigenen .ma-Domain.",
+        "description": "Ein Onlineshop mit Next.js und Tailwind CSS, dessen Inhalte in Sanity CMS gepflegt werden – deployt auf Vercel unter einer eigenen .ma-Domain.",
+        "highlights": [
+          "Inhalte über Sanity CMS gepflegt",
+          "Auf Vercel mit eigener .ma-Domain deployt"
+        ]
+      },
+      "admin-dashboard": {
+        "category": "Dashboard · UI",
+        "role": "Frontend-Entwickler",
+        "summary": "Ein modernes Analytics-Dashboard mit Next.js und shadcn/ui.",
+        "description": "Ein Admin- und Analytics-Dashboard mit Next.js, React, shadcn/ui und Tailwind CSS.",
+        "highlights": []
+      }
+    }
   }
 }

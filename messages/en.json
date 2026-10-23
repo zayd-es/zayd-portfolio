@@ -79,5 +79,67 @@
       "debugging": "AI-assisted Debugging",
       "review": "AI-assisted Code Review"
     }
+  },
+  "projects": {
+    "label": "Projects",
+    "title": "Selected <em>work</em>",
+    "intro": "A few things I’ve designed, built and shipped, from full-stack platforms to polished interfaces.",
+    "view": "View",
+    "featured": "Featured",
+    "back": "All projects",
+    "overview": "Overview",
+    "highlights": "Highlights",
+    "role": "Role",
+    "stack": "Stack",
+    "live": "Visit live site",
+    "code": "Source code",
+    "next": "Next project",
+    "coverAlt": "Screenshot of {title}",
+    "comingSoon": "A full case study for this project is coming soon.",
+    "items": {
+      "zayd-hotels": {
+        "category": "Full-stack · Booking platform",
+        "role": "Full-stack developer",
+        "summary": "A full-stack PERN hotel booking platform with payments, an owner dashboard and reviews.",
+        "description": "Zayd Hotels lets travellers search, filter and book hotel rooms, and gives owners a dashboard to manage their listings. The React front end talks to an Express API backed by PostgreSQL on Neon through Prisma, with Clerk for auth, Stripe for payments, Cloudinary for images and Resend for emails.",
+        "highlights": [
+          "Server-side filters and pagination",
+          "Stripe checkout and refunds",
+          "Owner dashboard to manage hotels and bookings",
+          "Reviews with owner replies",
+          "Authentication with Clerk",
+          "Image uploads with Cloudinary and emails with Resend",
+          "Dark mode"
+        ]
+      },
+      "ai-chatbot": {
+        "category": "AI · Web app",
+        "role": "Frontend developer",
+        "summary": "An AI-powered conversational interface with API integration.",
+        "description": "A chat interface built with React and Tailwind CSS that connects to an AI model through an API, exposed during development with Ngrok.",
+        "highlights": [
+          "Conversational chat interface",
+          "AI model integration through an API",
+          "Responsive layout with Tailwind CSS"
+        ]
+      },
+      "elchapo-store": {
+        "category": "E-commerce · Web app",
+        "role": "Developer",
+        "summary": "An e-commerce store built with Next.js and Sanity CMS, live on a custom .ma domain.",
+        "description": "An online store built with Next.js and Tailwind CSS, with its content managed in Sanity CMS and deployed on Vercel under a custom .ma domain.",
+        "highlights": [
+          "Content managed with Sanity CMS",
+          "Deployed on Vercel with a custom .ma domain"
+        ]
+      },
+      "admin-dashboard": {
+        "category": "Dashboard · UI",
+        "role": "Frontend developer",
+        "summary": "A modern analytics dashboard built with Next.js and shadcn/ui.",
+        "description": "An admin and analytics dashboard built with Next.js, React, shadcn/ui and Tailwind CSS.",
+        "highlights": []
+      }
+    }
   }
 }
