@@ -1,7 +1,9 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import chromeStill from "@/assets/hero-chrome.webp";
 import { useIntro } from "@/components/providers/intro-provider";
 import { useFinePointer, useMediaQuery, useReducedMotion } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
@@ -23,9 +25,10 @@ function supportsWebGL() {
 const noop = () => () => {};
 
 /**
- * Liquid-metal 3D blob on desktop mouse devices, a CSS ember blob everywhere
- * else (touch, small screens, reduced motion, no WebGL). The 3D chunk is only
- * downloaded once the preloader has finished.
+ * Gold liquid-chrome blob. Everyone first gets a still render of the scene;
+ * desktop mouse users then get the live 3D version cross-faded over it (the 3D
+ * chunk is only downloaded once the preloader has finished). Touch devices,
+ * small screens, reduced motion and browsers without WebGL keep the still.
  */
 export function HeroVisual({ className }: { className?: string }) {
   const { done } = useIntro();
@@ -51,17 +54,18 @@ export function HeroVisual({ className }: { className?: string }) {
 
   return (
     <div ref={ref} aria-hidden className={cn("relative aspect-square", className)}>
-      <div
-        className={cn(
-          "ember-blob absolute inset-[14%] transition-opacity duration-1000",
-          showCanvas && "opacity-0",
-        )}
+      <Image
+        src={chromeStill}
+        alt=""
+        fill
+        sizes="(min-width: 768px) 48vw, 95vw"
+        className={cn("object-contain transition-opacity duration-1000", showCanvas && "opacity-0")}
       />
       {use3D && (
         <div
           className={cn(
-            "absolute inset-0 transition-[opacity,scale] duration-[1400ms] ease-out-expo",
-            showCanvas ? "scale-100 opacity-100" : "scale-90 opacity-0",
+            "absolute inset-0 transition-opacity duration-1000",
+            showCanvas ? "opacity-100" : "opacity-0",
           )}
         >
           <BlobScene active={inView} onReady={() => setReady(true)} />

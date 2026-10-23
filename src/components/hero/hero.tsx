@@ -66,7 +66,7 @@ export function Hero() {
       <div className="relative flex flex-1 items-center py-10">
         <motion.div
           style={{ y: visualY, scale: visualScale }}
-          className="absolute top-1/2 end-[-18%] w-[95vw] -translate-y-1/2 sm:end-[-8%] sm:w-[70vw] md:end-[4%] md:w-[48vw] md:max-w-[760px]"
+          className="absolute top-[24%] end-[-24%] w-[88vw] -translate-y-1/2 sm:end-[-8%] sm:w-[70vw] md:top-1/2 md:end-[4%] md:w-[44vw] md:max-w-[700px] md:-translate-y-[64%]"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.6 }}
