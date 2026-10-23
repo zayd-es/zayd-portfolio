@@ -1,9 +1,9 @@
-import { Code2, Server, Sparkles, Wrench, type LucideIcon } from "lucide-react";
+import { CodeXml, Server, Sparkles, Wrench, type LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { Skill, SkillGroupId } from "@/data/skills";
 
 const icons: Record<SkillGroupId, LucideIcon> = {
-  frontend: Code2,
+  frontend: CodeXml,
   backend: Server,
   ai: Sparkles,
   tools: Wrench,
