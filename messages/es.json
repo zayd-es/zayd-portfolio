@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Zayd Elabbous — Desarrollador Frontend",
+    "description": "Desarrollador frontend en Tetuán, Marruecos, especializado en React y Next.js. Creo aplicaciones web rápidas, modernas y responsivas, y también el backend cuando el proyecto lo necesita."
+  },
+  "nav": {
+    "label": "Navegación principal",
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "skip": "Saltar al contenido"
+  },
+  "theme": {
+    "toLight": "Cambiar a tema claro",
+    "toDark": "Cambiar a tema oscuro"
+  },
+  "locale": {
+    "label": "Idioma",
+    "change": "Cambiar idioma, actual: {language}"
+  },
+  "preloader": {
+    "loading": "Cargando"
+  },
+  "hero": {
+    "available": "Disponible para freelance",
+    "role": "Desarrollador Frontend",
+    "location": "Tetuán, Marruecos",
+    "localTime": "Hora local",
+    "tagline": "Creo experiencias web rápidas, modernas y responsivas con React y Next.js, y desarrollo también el backend cuando el proyecto lo necesita.",
+    "ctaWork": "Ver mis proyectos",
+    "ctaContact": "Hablemos",
+    "scroll": "Desliza para explorar"
+  }
+}

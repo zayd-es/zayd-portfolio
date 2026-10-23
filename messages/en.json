@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Zayd Elabbous — Frontend Developer",
+    "description": "Frontend developer based in Tetouan, Morocco, specialized in React and Next.js. I build fast, modern and responsive web apps, and the full stack when the project needs it."
+  },
+  "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skip": "Skip to content"
+  },
+  "theme": {
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
+  "locale": {
+    "label": "Language",
+    "change": "Change language, current: {language}"
+  },
+  "preloader": {
+    "loading": "Loading"
+  },
+  "hero": {
+    "available": "Available for freelance",
+    "role": "Frontend Developer",
+    "location": "Tetouan, Morocco",
+    "localTime": "Local time",
+    "tagline": "I craft fast, modern and responsive web experiences with React and Next.js, and build the full stack when the project needs it.",
+    "ctaWork": "See my work",
+    "ctaContact": "Let’s talk",
+    "scroll": "Scroll to explore"
+  }
+}
