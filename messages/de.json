@@ -112,6 +112,20 @@
           "Dark Mode"
         ]
       },
+      "pvc-confort": {
+        "category": "Unternehmenswebsite · CMS",
+        "role": "Entwickler",
+        "summary": "Eine mehrsprachige Website für einen Fenster- und Türenbauer (PVC und Aluminium) in Marokko, mit einem Blog in Sanity.",
+        "description": "PVC Confort Maroc stellt die Fenster, Türen und Doppelverglasungen des Unternehmens vor und hilft Kunden, ein Angebot anzufragen. Gebaut mit Next.js und next-intl auf Französisch, Englisch und Arabisch, mit einem in Sanity CMS verwalteten Blog und einem Kontaktformular, das E-Mails über Resend verschickt.",
+        "highlights": [
+          "Französisch, Englisch und Arabisch (von rechts nach links)",
+          "Blog mit Kategorien und Seitennavigation, verwaltet in Sanity",
+          "In die Website integriertes Sanity Studio",
+          "Kontaktformular mit E-Mails über Resend",
+          "WhatsApp-Button für schnelle Angebote",
+          "SEO-Metadaten für jede Seite und jeden Artikel"
+        ]
+      },
       "elchapo-store": {
         "category": "E-Commerce · Web-App",
         "role": "Entwickler",

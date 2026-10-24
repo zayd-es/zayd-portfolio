@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image";
 import elchapoStore from "@/assets/projects/elchapo-store.jpg";
+import pvcConfort from "@/assets/projects/pvc-confort.jpg";
 import zaydHotels from "@/assets/projects/zayd-hotels.jpg";
 
 /**
@@ -41,6 +42,13 @@ export const projects: readonly Project[] = [
       live: "https://pern-booking-app.vercel.app",
       github: "https://github.com/zayd-es/pern-booking-app",
     },
+  },
+  {
+    slug: "pvc-confort",
+    title: "PVC Confort Maroc",
+    cover: pvcConfort,
+    stack: ["Next.js", "next-intl", "Sanity CMS", "Tailwind CSS", "Resend", "Vercel"],
+    links: { live: "https://pvc-maroc-app.vercel.app" },
   },
   {
     slug: "elchapo-store",

@@ -112,6 +112,20 @@
           "Mode sombre"
         ]
       },
+      "pvc-confort": {
+        "category": "Site vitrine · CMS",
+        "role": "Développeur",
+        "summary": "Un site multilingue pour une entreprise de menuiserie PVC et aluminium au Maroc, avec un blog géré dans Sanity.",
+        "description": "PVC Confort Maroc présente les fenêtres, portes et solutions de double vitrage de l’entreprise et aide les clients à demander un devis. Il est construit avec Next.js et next-intl en français, anglais et arabe, avec un blog géré dans Sanity CMS et un formulaire de contact qui envoie les e-mails via Resend.",
+        "highlights": [
+          "Français, anglais et arabe (de droite à gauche)",
+          "Blog avec catégories et pagination, géré dans Sanity",
+          "Sanity Studio intégré au site",
+          "Formulaire de contact avec e-mails envoyés par Resend",
+          "Bouton WhatsApp pour des devis rapides",
+          "Métadonnées SEO pour chaque page et article"
+        ]
+      },
       "elchapo-store": {
         "category": "E-commerce · Application web",
         "role": "Développeur",

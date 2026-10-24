@@ -112,6 +112,20 @@
           "Dark mode"
         ]
       },
+      "pvc-confort": {
+        "category": "Business website · CMS",
+        "role": "Developer",
+        "summary": "A multilingual website for a PVC and aluminium joinery company in Morocco, with a blog managed in Sanity.",
+        "description": "PVC Confort Maroc presents the company's windows, doors and double glazing services and helps customers ask for a quote. It is built with Next.js and next-intl in French, English and Arabic, with a blog managed in Sanity CMS and a contact form that sends emails through Resend.",
+        "highlights": [
+          "French, English and Arabic (right-to-left)",
+          "Blog with categories and pagination, managed in Sanity",
+          "Sanity Studio built into the site",
+          "Contact form with emails sent by Resend",
+          "WhatsApp button for quick quotes",
+          "SEO metadata for every page and article"
+        ]
+      },
       "elchapo-store": {
         "category": "E-commerce · Web app",
         "role": "Developer",
