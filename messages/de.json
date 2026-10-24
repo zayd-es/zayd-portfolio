@@ -112,17 +112,6 @@
           "Dark Mode"
         ]
       },
-      "ai-chatbot": {
-        "category": "KI · Web-App",
-        "role": "Frontend-Entwickler",
-        "summary": "Ein KI-gestütztes Chat-Interface mit API-Anbindung.",
-        "description": "Ein Chat-Interface mit React und Tailwind CSS, das über eine API an ein KI-Modell angebunden ist und während der Entwicklung über Ngrok bereitgestellt wurde.",
-        "highlights": [
-          "Konversationelles Chat-Interface",
-          "Anbindung eines KI-Modells per API",
-          "Responsives Layout mit Tailwind CSS"
-        ]
-      },
       "elchapo-store": {
         "category": "E-Commerce · Web-App",
         "role": "Entwickler",
@@ -132,13 +121,6 @@
           "Inhalte über Sanity CMS gepflegt",
           "Auf Vercel mit eigener .ma-Domain deployt"
         ]
-      },
-      "admin-dashboard": {
-        "category": "Dashboard · UI",
-        "role": "Frontend-Entwickler",
-        "summary": "Ein modernes Analytics-Dashboard mit Next.js und shadcn/ui.",
-        "description": "Ein Admin- und Analytics-Dashboard mit Next.js, React, shadcn/ui und Tailwind CSS.",
-        "highlights": []
       }
     }
   },

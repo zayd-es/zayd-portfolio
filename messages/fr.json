@@ -112,17 +112,6 @@
           "Mode sombre"
         ]
       },
-      "ai-chatbot": {
-        "category": "IA · Application web",
-        "role": "Développeur frontend",
-        "summary": "Une interface conversationnelle propulsée par l’IA avec intégration d’API.",
-        "description": "Une interface de chat développée avec React et Tailwind CSS, connectée à un modèle d’IA via une API, exposée pendant le développement avec Ngrok.",
-        "highlights": [
-          "Interface de chat conversationnelle",
-          "Intégration d’un modèle d’IA via une API",
-          "Mise en page responsive avec Tailwind CSS"
-        ]
-      },
       "elchapo-store": {
         "category": "E-commerce · Application web",
         "role": "Développeur",
@@ -132,13 +121,6 @@
           "Contenu géré avec Sanity CMS",
           "Déployée sur Vercel avec un domaine .ma personnalisé"
         ]
-      },
-      "admin-dashboard": {
-        "category": "Dashboard · UI",
-        "role": "Développeur frontend",
-        "summary": "Un tableau de bord analytique moderne développé avec Next.js et shadcn/ui.",
-        "description": "Un tableau de bord d’administration et d’analyse développé avec Next.js, React, shadcn/ui et Tailwind CSS.",
-        "highlights": []
       }
     }
   },

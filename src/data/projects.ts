@@ -1,6 +1,4 @@
 import type { StaticImageData } from "next/image";
-import adminDashboard from "@/assets/projects/admin-dashboard.jpg";
-import aiChatbot from "@/assets/projects/ai-chatbot.jpg";
 import elchapoStore from "@/assets/projects/elchapo-store.jpg";
 import zaydHotels from "@/assets/projects/zayd-hotels.jpg";
 
@@ -45,27 +43,12 @@ export const projects: readonly Project[] = [
     },
   },
   {
-    slug: "ai-chatbot",
-    title: "AI ChatBot",
-    cover: aiChatbot,
-    stack: ["React", "Tailwind CSS", "Ngrok"],
-    links: { live: "https://ai-chatbot-one-blue-38.vercel.app" },
-  },
-  {
     slug: "elchapo-store",
     title: "ElChapo Store",
     cover: elchapoStore,
     draft: true,
     stack: ["Next.js", "Sanity CMS", "Tailwind CSS", "Vercel"],
     links: { live: "https://elchapo44.ma" },
-  },
-  {
-    slug: "admin-dashboard",
-    title: "Admin Dashboard",
-    cover: adminDashboard,
-    draft: true,
-    stack: ["Next.js", "React", "shadcn/ui", "Tailwind CSS"],
-    links: { live: "https://next16-shadcn-dashboard.vercel.app" },
   },
 ];
 

@@ -112,17 +112,6 @@
           "الوضع الداكن"
         ]
       },
-      "ai-chatbot": {
-        "category": "ذكاء اصطناعي · تطبيق ويب",
-        "role": "مطوّر واجهات أمامية",
-        "summary": "واجهة محادثة مدعومة بالذكاء الاصطناعي مع تكامل API.",
-        "description": "واجهة محادثة مبنية بـ React وTailwind CSS تتصل بنموذج ذكاء اصطناعي عبر API، وتمت إتاحتها أثناء التطوير عبر Ngrok.",
-        "highlights": [
-          "واجهة محادثة تفاعلية",
-          "تكامل مع نموذج ذكاء اصطناعي عبر API",
-          "تصميم متجاوب باستخدام Tailwind CSS"
-        ]
-      },
       "elchapo-store": {
         "category": "تجارة إلكترونية · تطبيق ويب",
         "role": "مطوّر",
@@ -132,13 +121,6 @@
           "إدارة المحتوى عبر Sanity CMS",
           "منشور على Vercel بنطاق مغربي خاص (elchapo44.ma)"
         ]
-      },
-      "admin-dashboard": {
-        "category": "لوحة تحكم · واجهة",
-        "role": "مطوّر واجهات أمامية",
-        "summary": "لوحة تحليلات عصرية مبنية بـ Next.js وshadcn/ui.",
-        "description": "لوحة إدارة وتحليلات مبنية بـ Next.js وReact وshadcn/ui وTailwind CSS.",
-        "highlights": []
       }
     }
   },
