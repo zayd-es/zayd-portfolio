@@ -33,7 +33,7 @@ export function Portrait({ alt, className }: { alt: string; className?: string }
             fill
             placeholder="blur"
             sizes="(min-width: 1024px) 40vw, 92vw"
-            className="object-cover object-[50%_30%] grayscale-[35%] transition-[filter,scale] duration-1000 ease-out-expo group-hover:scale-105 group-hover:grayscale-0"
+            className="object-cover object-[75%_50%] grayscale-[35%] transition-[filter,scale] duration-1000 ease-out-expo group-hover:scale-105 group-hover:grayscale-0"
           />
         </motion.div>
         {/* Warm ember tint */}
