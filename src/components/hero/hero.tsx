@@ -1,13 +1,15 @@
 "use client";
 
 import { motion, useScroll, useTransform, type Variants } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRef } from "react";
 import { SplitChars } from "@/components/motion/split-chars";
 import { useIntro } from "@/components/providers/intro-provider";
 import { PillLink } from "@/components/ui/pill-link";
 import { profile } from "@/data/profile";
 import { useReducedMotion } from "@/hooks/use-media-query";
+import { getDirection, type Locale } from "@/i18n/routing";
+import { isolateLatin } from "@/lib/bidi";
 import { HeroVisual } from "./hero-visual";
 import { LocalTime } from "./local-time";
 
@@ -22,6 +24,7 @@ const rise: Variants = {
 
 export function Hero() {
   const t = useTranslations("hero");
+  const rtl = getDirection(useLocale() as Locale) === "rtl";
   const { done } = useIntro();
   const reduced = useReducedMotion();
   const ref = useRef<HTMLElement>(null);
@@ -98,7 +101,7 @@ export function Hero() {
       <motion.div style={{ opacity: fade }} className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
           <motion.p variants={rise} initial="hidden" animate={state} custom={0.7} className="text-lg leading-relaxed text-pretty text-muted md:text-xl">
-            {t("tagline")}
+            {isolateLatin(t("tagline"), rtl)}
           </motion.p>
           <motion.div variants={rise} initial="hidden" animate={state} custom={0.85} className="mt-7 flex flex-wrap gap-3">
             <PillLink href="#projects">{t("ctaWork")}</PillLink>

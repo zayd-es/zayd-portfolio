@@ -7,7 +7,8 @@ import { ProjectCover } from "@/components/projects/project-cover";
 import { PillLink } from "@/components/ui/pill-link";
 import { getNextProject, getProject, projects } from "@/data/projects";
 import { Link } from "@/i18n/navigation";
-import type { Locale } from "@/i18n/routing";
+import { getDirection, type Locale } from "@/i18n/routing";
+import { isolateLatin } from "@/lib/bidi";
 import { languageAlternates, localePath } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -46,6 +47,7 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
   setRequestLocale(locale as Locale);
 
   const t = await getTranslations({ locale, namespace: "projects" });
+  const rtl = getDirection(locale as Locale) === "rtl";
   const highlights = t.raw(`items.${slug}.highlights`) as string[];
   const next = getNextProject(slug);
 
@@ -80,7 +82,7 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
               </h1>
             </div>
             <p className="text-xl leading-relaxed text-pretty text-muted lg:col-span-4">
-              {t(`items.${slug}.summary`)}
+              {isolateLatin(t(`items.${slug}.summary`), rtl)}
             </p>
           </header>
 
@@ -126,7 +128,7 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
 
             <div className="lg:col-span-7 lg:col-start-6">
               <h2 className="text-xs tracking-[0.2em] text-muted uppercase">{t("overview")}</h2>
-              <p className="mt-4 text-2xl leading-snug text-pretty md:text-3xl">{t(`items.${slug}.description`)}</p>
+              <p className="mt-4 text-2xl leading-snug text-pretty md:text-3xl">{isolateLatin(t(`items.${slug}.description`), rtl)}</p>
 
               {highlights.length > 0 && (
                 <>
@@ -135,7 +137,7 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
                     {highlights.map((h, i) => (
                       <li key={h} className="flex gap-6 border-t border-line py-5 text-lg last:border-b">
                         <span className="font-display text-xl text-accent italic">0{i + 1}</span>
-                        {h}
+                        <span>{isolateLatin(h, rtl)}</span>
                       </li>
                     ))}
                   </ol>

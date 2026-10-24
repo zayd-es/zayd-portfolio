@@ -14,6 +14,10 @@ export function Providers({ children }: { children: ReactNode }) {
       defaultTheme="dark"
       enableSystem={false}
       disableTransitionOnChange
+      // The theme script only matters in the server HTML. When the layout re-renders
+      // in the browser (e.g. after switching language) React warns about client-rendered
+      // scripts unless they are data blocks, so mark it as one there (it never runs anyway).
+      scriptProps={{ type: typeof window === "undefined" ? "text/javascript" : "application/json" }}
     >
       {/* Skips transform/layout animations for visitors who prefer reduced motion. */}
       <MotionConfig reducedMotion="user">

@@ -3,15 +3,28 @@
 import { Environment, Lightformer, MeshDistortMaterial, PerformanceMonitor } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState, type ComponentRef } from "react";
-import { MathUtils, type Mesh } from "three";
+import { MathUtils, setConsoleFunction, Timer, type Mesh } from "three";
 
 const BASE_DISTORT = 0.32;
+
+// R3F 9 still creates a THREE.Clock in its store (deprecated since r183). This scene
+// keeps time with a THREE.Timer, so drop only that warning. Also drop the shader info
+// log that Windows' ANGLE/D3D compiler fills with harmless precision notes ("warning
+// X4122"); real shader errors are logged as errors and still pass through.
+setConsoleFunction((type, message, ...params) => {
+  if (type === "warn" && message.startsWith("THREE.Clock:")) return;
+  if (type === "warn" && message.startsWith("THREE.WebGLProgram: Program Info Log")) return;
+  console[type](message, ...params);
+});
 
 function LiquidChrome() {
   const mesh = useRef<Mesh>(null);
   const material = useRef<ComponentRef<typeof MeshDistortMaterial>>(null);
   // Normalised pointer (-1..1) tracked on the whole window, plus a decaying speed.
   const pointer = useRef({ x: 0, y: 0, speed: 0 });
+  const [timer] = useState(() => new Timer());
+
+  useEffect(() => () => timer.dispose(), [timer]);
 
   useEffect(() => {
     const onMove = (e: PointerEvent) => {
@@ -26,13 +39,14 @@ function LiquidChrome() {
     return () => window.removeEventListener("pointermove", onMove);
   }, []);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     const m = mesh.current;
     const p = pointer.current;
     if (!m || !material.current) return;
     // Low stiffness: the surface drifts after the pointer instead of snapping.
     const k = 1 - Math.exp(-delta * 1.2);
-    const t = state.clock.elapsedTime;
+    timer.update();
+    const t = timer.getElapsed();
 
     m.rotation.x = MathUtils.lerp(m.rotation.x, -p.y * 0.25 + Math.sin(t * 0.15) * 0.08, k);
     m.rotation.y = MathUtils.lerp(m.rotation.y, p.x * 0.35 + t * 0.04, k);

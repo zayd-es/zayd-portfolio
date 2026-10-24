@@ -14,6 +14,11 @@
   }
 }
 
+/* Fixed navbar height (top offset + bar), for layouts that must stay clear of it. */
+:root {
+  --header-h: 5rem;
+}
+
 /* ---------- Champagne tokens ---------- */
 :root,
 [data-theme="dark"] {

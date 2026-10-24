@@ -2,15 +2,18 @@
 
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { PillLink } from "@/components/ui/pill-link";
 import { SectionLabel } from "@/components/ui/section-label";
 import { services } from "@/data/services";
+import { getDirection, type Locale } from "@/i18n/routing";
+import { isolateLatin } from "@/lib/bidi";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
 export function Services() {
   const t = useTranslations("services");
+  const rtl = getDirection(useLocale() as Locale) === "rtl";
 
   return (
     <section id="services" className="scroll-mt-20 px-4 py-28 md:px-8 md:py-40">
@@ -68,7 +71,7 @@ export function Services() {
                 </div>
 
                 <p className="col-span-full col-start-2 leading-relaxed text-pretty text-muted transition-colors duration-700 group-hover:text-on-accent/80 md:col-span-1 md:col-start-auto">
-                  {t(`items.${id}.description`)}
+                  {isolateLatin(t(`items.${id}.description`), rtl)}
                 </p>
 
                 <span

@@ -53,6 +53,8 @@ export function Skills() {
             scrub: 0.8,
             invalidateOnRefresh: true,
             onUpdate: (self) => gsap.set(barRef.current, { scaleX: self.progress }),
+            // Re-created mid-section (e.g. after switching language): show the current progress right away.
+            onRefresh: (self) => gsap.set(barRef.current, { scaleX: self.progress }),
           },
         });
       });
@@ -79,26 +81,26 @@ export function Skills() {
     <section id="skills" className="relative scroll-mt-20 overflow-x-clip">
       <div
         ref={pinRef}
-        className="flex flex-col px-4 py-28 md:px-8 md:py-36 lg:motion-safe:h-svh lg:motion-safe:pt-28 lg:motion-safe:pb-10"
+        className="flex flex-col px-4 py-28 md:px-8 md:py-36 lg:motion-safe:h-svh lg:motion-safe:pt-[calc(var(--header-h)+clamp(0.75rem,3vh,2.5rem))] lg:motion-safe:pb-[clamp(1rem,4vh,2.5rem)]"
       >
         <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <SectionLabel index="02">{t("label")}</SectionLabel>
-            <h2 className="mt-6 font-display text-[clamp(3rem,8vw,7.5rem)] leading-[0.9] tracking-tight">
+            <h2 className="mt-6 font-display text-[clamp(3rem,8vw,7.5rem)] leading-[0.9] tracking-tight lg:motion-safe:mt-[1.5vh] lg:motion-safe:text-[clamp(2.75rem,min(7vw,10vh),7.5rem)]">
               {t.rich("title", { em: (chunks) => <em className="text-accent">{chunks}</em> })}
             </h2>
           </div>
-          <p className="max-w-sm text-lg leading-relaxed text-pretty text-muted">{t("intro")}</p>
+          <p className="max-w-sm text-lg leading-relaxed text-pretty text-muted lg:motion-safe:text-[clamp(0.95rem,2.2vh,1.125rem)]">{t("intro")}</p>
         </div>
 
-        <div className="mx-auto mt-8 hidden h-px w-full max-w-[1600px] bg-line lg:motion-safe:block">
+        <div className="mx-auto mt-[3vh] hidden h-px w-full max-w-[1600px] shrink-0 bg-line lg:motion-safe:block">
           <div ref={barRef} className="h-full origin-left scale-x-0 bg-accent rtl:origin-right" />
         </div>
 
-        <div className="mx-auto mt-12 w-full max-w-[1600px] lg:motion-safe:mt-8 lg:motion-safe:min-h-0 lg:motion-safe:flex-1">
+        <div className="mx-auto mt-12 w-full max-w-[1600px] lg:motion-safe:mt-[3vh] lg:motion-safe:flex lg:motion-safe:min-h-0 lg:motion-safe:flex-1 lg:motion-safe:flex-col lg:motion-safe:justify-center">
           <div
             ref={trackRef}
-            className="grid gap-4 md:grid-cols-2 lg:motion-safe:flex lg:motion-safe:h-full lg:motion-safe:gap-6 lg:motion-safe:overflow-visible"
+            className="grid gap-4 md:grid-cols-2 lg:motion-safe:flex lg:motion-safe:max-h-full lg:motion-safe:gap-6 lg:motion-safe:overflow-visible"
           >
             {skillGroups.map((group, i) => (
               <motion.div
