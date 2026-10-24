@@ -67,8 +67,8 @@
         "description": "APIs, databases, auth and payments to turn interfaces into complete full-stack products."
       },
       "ai": {
-        "title": "AI Workflow",
-        "description": "AI tools that help me plan, debug and ship faster, with every line understood and reviewed."
+        "title": "AI-Assisted Development",
+        "description": "I use AI tools to work faster and ship better code, while understanding and reviewing everything I commit."
       },
       "tools": {
         "title": "Tools",
@@ -76,9 +76,8 @@
       }
     },
     "items": {
-      "prompting": "Prompt Engineering",
-      "debugging": "AI-assisted Debugging",
-      "review": "AI-assisted Code Review"
+      "debugging": "AI-assisted debugging",
+      "review": "AI-assisted code review"
     }
   },
   "projects": {

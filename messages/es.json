@@ -67,8 +67,8 @@
         "description": "APIs, bases de datos, autenticación y pagos para convertir interfaces en productos full-stack completos."
       },
       "ai": {
-        "title": "Flujo con IA",
-        "description": "Herramientas de IA que me ayudan a planificar, depurar y entregar más rápido, entendiendo y revisando cada línea."
+        "title": "Desarrollo asistido por IA",
+        "description": "Uso herramientas de IA para trabajar más rápido y entregar mejor código, entendiendo y revisando todo lo que subo."
       },
       "tools": {
         "title": "Herramientas",
@@ -76,7 +76,6 @@
       }
     },
     "items": {
-      "prompting": "Ingeniería de prompts",
       "debugging": "Depuración asistida por IA",
       "review": "Revisión de código asistida por IA"
     }

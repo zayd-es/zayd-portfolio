@@ -67,8 +67,8 @@
         "description": "API, bases de données, authentification et paiements pour transformer une interface en produit full-stack complet."
       },
       "ai": {
-        "title": "Workflow IA",
-        "description": "Des outils d’IA qui m’aident à planifier, déboguer et livrer plus vite, chaque ligne étant comprise et relue."
+        "title": "Développement assisté par IA",
+        "description": "J’utilise des outils d’IA pour travailler plus vite et livrer un meilleur code, tout en comprenant et relisant tout ce que je commite."
       },
       "tools": {
         "title": "Outils",
@@ -76,7 +76,6 @@
       }
     },
     "items": {
-      "prompting": "Prompt engineering",
       "debugging": "Débogage assisté par IA",
       "review": "Revue de code assistée par IA"
     }

@@ -34,7 +34,6 @@ export const skillGroups = [
     id: "ai",
     skills: [
       { name: "Claude Code" },
-      { key: "prompting" },
       { key: "debugging" },
       { key: "review" },
     ],

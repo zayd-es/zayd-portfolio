@@ -67,8 +67,8 @@
         "description": "APIs, Datenbanken, Authentifizierung und Zahlungen, damit aus Interfaces komplette Full-Stack-Produkte werden."
       },
       "ai": {
-        "title": "KI-Workflow",
-        "description": "KI-Tools, die mir helfen, schneller zu planen, zu debuggen und auszuliefern – jede Zeile verstanden und geprüft."
+        "title": "KI-gestützte Entwicklung",
+        "description": "Ich nutze KI-Tools, um schneller zu arbeiten und besseren Code auszuliefern – und verstehe und prüfe dabei alles, was ich committe."
       },
       "tools": {
         "title": "Tools",
@@ -76,7 +76,6 @@
       }
     },
     "items": {
-      "prompting": "Prompt Engineering",
       "debugging": "KI-gestütztes Debugging",
       "review": "KI-gestütztes Code-Review"
     }

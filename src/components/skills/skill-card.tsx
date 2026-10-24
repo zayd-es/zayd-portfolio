@@ -36,7 +36,7 @@ export function SkillCard({
       </div>
 
       <div>
-        <h3 className="font-display text-5xl leading-none md:text-6xl">{t(`groups.${id}.title`)}</h3>
+        <h3 className="font-display text-5xl leading-none break-words md:text-6xl">{t(`groups.${id}.title`)}</h3>
         <p className="mt-4 max-w-sm leading-relaxed text-pretty text-muted">{t(`groups.${id}.description`)}</p>
         <ul className="mt-7 flex flex-wrap gap-2">
           {skills.map((s) => {
