@@ -58,8 +58,7 @@ export const projects: readonly Project[] = [
     title: "ElChapo Store",
     cover: elchapoStore,
     freelance: true,
-    draft: true,
-    stack: ["Next.js", "Sanity CMS", "Tailwind CSS", "Vercel"],
+    stack: ["Next.js", "Sanity CMS", "Zustand", "Tailwind CSS", "shadcn/ui", "Resend", "Vercel"],
     links: { live: "https://elchapo44.ma" },
   },
 ];

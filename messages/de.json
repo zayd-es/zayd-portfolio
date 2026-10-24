@@ -130,11 +130,17 @@
       "elchapo-store": {
         "category": "E-Commerce · Web-App",
         "role": "Freelance-Entwickler",
-        "summary": "Ein Onlineshop mit Next.js und Sanity CMS, live unter einer eigenen .ma-Domain.",
-        "description": "Ein Onlineshop mit Next.js und Tailwind CSS, dessen Inhalte in Sanity CMS gepflegt werden – deployt auf Vercel unter einer eigenen .ma-Domain.",
+        "summary": "Ein Streetwear-Onlineshop für ElChapo44 in Marokko, mit Zahlung bei Lieferung und Lagerbestand in Sanity.",
+        "description": "ElChapo Store ist der Onlineshop von ElChapo44, einer Streetwear-Marke in Marokko. Kunden stöbern nach Kategorien, suchen, wählen Größe und Farbe und bestellen mit Zahlung bei Lieferung. Jede Bestellung wird in Sanity gespeichert und aktualisiert den Bestand, sodass der Inhaber Produkte, Banner und Bestellungen im integrierten Sanity Studio verwaltet, ohne den Code anzufassen.",
         "highlights": [
-          "Inhalte über Sanity CMS gepflegt",
-          "Auf Vercel mit eigener .ma-Domain deployt"
+          "Zahlung bei Lieferung, Bestellungen in Sanity gespeichert",
+          "Bestellstatus: offen, bestätigt, versendet, zugestellt",
+          "Bestand pro Größe und Farbe, bei jeder Bestellung geprüft und aktualisiert",
+          "Integriertes Sanity Studio für Produkte, Banner und Bestellungen",
+          "E-Mail an den Inhaber bei jeder neuen Bestellung, über Resend",
+          "Warenkorb im Browser gespeichert mit Zustand",
+          "Suche, Kategoriefilter und Produktseiten",
+          "SEO: Sitemap, robots und strukturierte Produktdaten"
         ]
       }
     }
