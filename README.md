@@ -8,7 +8,7 @@ for 5 languages (EN, FR, AR with RTL, ES, DE), and Resend for the contact form.
 
 ```bash
 npm install
-cp .env.example .env.local   # then fill in the values
+# create .env.local with the variables listed below
 npm run dev                  # http://localhost:3000
 ```
 
