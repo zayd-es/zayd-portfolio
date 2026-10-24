@@ -45,6 +45,7 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10% 0px" }}
               transition={{ duration: 0.9, delay: i * 0.05, ease }}
+              data-touch
               className="group relative isolate overflow-hidden border-b border-line"
             >
               {/* Fill sweep on hover */}

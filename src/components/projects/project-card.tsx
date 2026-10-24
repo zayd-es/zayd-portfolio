@@ -17,6 +17,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       href={`/projects/${project.slug}`}
       transitionTypes={["nav-forward"]}
       data-cursor-label={t("view")}
+      data-touch
       className="group block rounded-[1.75rem]"
     >
       <Tilt max={featured ? 4 : 7} className="rounded-[1.75rem]">

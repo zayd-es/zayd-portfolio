@@ -12,7 +12,7 @@ export function PillLink({ variant = "solid", className, children, ...props }: P
       <a
         className={cn(
           "group relative inline-flex h-14 items-center gap-3 overflow-hidden rounded-full ps-7 pe-2 text-base font-medium isolate",
-          "transition-colors duration-500 ease-out-expo",
+          "transition-[color,scale] duration-500 ease-out-expo active:scale-[0.97]",
           variant === "solid"
             ? "bg-accent text-on-accent hover:text-bg"
             : "border border-line text-fg hover:text-bg",

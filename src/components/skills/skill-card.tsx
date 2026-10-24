@@ -22,7 +22,7 @@ export function SkillCard({
   const Icon = icons[id];
 
   return (
-    <article className="group relative isolate flex min-h-[26rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-line bg-bg-elevated p-7 transition-colors duration-500 hover:border-accent/40 md:p-9 lg:motion-safe:h-full lg:motion-safe:min-h-0">
+    <article data-touch className="group relative isolate flex min-h-[26rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-line bg-bg-elevated p-7 transition-colors duration-500 hover:border-accent/40 md:p-9 lg:motion-safe:h-full lg:motion-safe:min-h-0">
       <div
         aria-hidden
         className="absolute -end-24 -top-24 -z-10 size-72 rounded-full bg-[radial-gradient(circle,var(--accent-soft),transparent_70%)] transition-transform duration-1000 ease-out-expo group-hover:scale-150"

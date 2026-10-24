@@ -2,6 +2,18 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
+/* Real hover on mouse devices, plus the scroll-driven stand-in set by <TouchHover> on touch screens. */
+@custom-variant hover {
+  @media (hover: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+  &[data-touch-hover] {
+    @slot;
+  }
+}
+
 /* ---------- Champagne tokens ---------- */
 :root,
 [data-theme="dark"] {
