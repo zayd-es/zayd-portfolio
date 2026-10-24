@@ -67,7 +67,14 @@ export default async function ProjectPage({ params }: PageProps<"/[locale]/proje
 
           <header className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-8">
-              <p className="text-sm tracking-[0.2em] text-accent uppercase">{t(`items.${slug}.category`)}</p>
+              <div className="flex flex-wrap items-center gap-4">
+                <p className="text-sm tracking-[0.2em] text-accent uppercase">{t(`items.${slug}.category`)}</p>
+                {project.freelance && (
+                  <span className="rounded-full border border-accent/40 px-3 py-1 text-xs font-medium text-accent">
+                    {t("freelance")}
+                  </span>
+                )}
+              </div>
               <h1 className="mt-4 font-display text-[clamp(3.5rem,11vw,10rem)] leading-[0.85] tracking-tight">
                 {project.title}
               </h1>

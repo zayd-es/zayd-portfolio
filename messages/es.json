@@ -86,6 +86,7 @@
     "intro": "Algunos proyectos que he diseñado, construido y lanzado, desde plataformas full-stack hasta interfaces cuidadas.",
     "view": "Ver",
     "featured": "Destacado",
+    "freelance": "Freelance",
     "back": "Todos los proyectos",
     "overview": "Resumen",
     "highlights": "Puntos clave",
@@ -114,7 +115,7 @@
       },
       "pvc-confort": {
         "category": "Web corporativa · CMS",
-        "role": "Desarrollador",
+        "role": "Desarrollador freelance",
         "summary": "Una web multilingüe para una empresa de carpintería de PVC y aluminio en Marruecos, con un blog gestionado en Sanity.",
         "description": "PVC Confort Maroc presenta las ventanas, puertas y soluciones de doble acristalamiento de la empresa y ayuda a los clientes a pedir presupuesto. Está hecha con Next.js y next-intl en francés, inglés y árabe, con un blog gestionado en Sanity CMS y un formulario de contacto que envía los correos con Resend.",
         "highlights": [
@@ -128,7 +129,7 @@
       },
       "elchapo-store": {
         "category": "E-commerce · Aplicación web",
-        "role": "Desarrollador",
+        "role": "Desarrollador freelance",
         "summary": "Una tienda online creada con Next.js y Sanity CMS, publicada en un dominio .ma propio.",
         "description": "Una tienda online creada con Next.js y Tailwind CSS, con el contenido gestionado en Sanity CMS y desplegada en Vercel con un dominio .ma propio.",
         "highlights": [

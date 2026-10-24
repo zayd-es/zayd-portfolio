@@ -38,6 +38,12 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             ))}
           </div>
 
+          {project.freelance && (
+            <span className="absolute start-5 top-5 rounded-full border border-white/20 bg-black/45 px-3.5 py-1.5 text-xs font-medium text-white backdrop-blur-md md:start-7 md:top-7">
+              {t("freelance")}
+            </span>
+          )}
+
           {featured && (
             <span className="absolute end-5 bottom-5 rounded-full bg-accent px-3.5 py-1.5 text-xs font-medium text-on-accent transition-opacity duration-300 group-hover:opacity-0 md:end-7 md:bottom-7">
               {t("featured")}

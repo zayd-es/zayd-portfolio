@@ -16,6 +16,8 @@ export type Project = {
   stack: readonly string[];
   links: { live?: string; github?: string };
   featured?: boolean;
+  /** Client work done as a freelancer: shows a "Freelance" badge. */
+  freelance?: boolean;
   /** Full case study not written yet: the detail page shows a short note. */
   draft?: boolean;
 };
@@ -47,6 +49,7 @@ export const projects: readonly Project[] = [
     slug: "pvc-confort",
     title: "PVC Confort Maroc",
     cover: pvcConfort,
+    freelance: true,
     stack: ["Next.js", "next-intl", "Sanity CMS", "Tailwind CSS", "Resend", "Vercel"],
     links: { live: "https://pvc-maroc-app.vercel.app" },
   },
@@ -54,6 +57,7 @@ export const projects: readonly Project[] = [
     slug: "elchapo-store",
     title: "ElChapo Store",
     cover: elchapoStore,
+    freelance: true,
     draft: true,
     stack: ["Next.js", "Sanity CMS", "Tailwind CSS", "Vercel"],
     links: { live: "https://elchapo44.ma" },
