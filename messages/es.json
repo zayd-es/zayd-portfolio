@@ -25,6 +25,10 @@
     "label": "Idioma",
     "change": "Cambiar idioma, actual: {language}"
   },
+  "cv": {
+    "download": "Descargar CV",
+    "short": "CV"
+  },
   "preloader": {
     "loading": "Cargando"
   },
@@ -50,8 +54,7 @@
       "years": "Años creando aplicaciones web",
       "languages": "Idiomas que habla este sitio",
       "reviewed": "De mi código revisado línea a línea"
-    },
-    "resume": "Descargar CV"
+    }
   },
   "skills": {
     "label": "Habilidades",

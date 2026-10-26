@@ -1,12 +1,15 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import type { ComponentProps } from "react";
 import { Magnetic } from "@/components/motion/magnetic";
 import { cn } from "@/lib/utils";
 
-type Props = ComponentProps<"a"> & { variant?: "solid" | "outline" };
+type Props = ComponentProps<"a"> & { variant?: "solid" | "outline"; icon?: "arrow" | "download" };
 
-/** Magnetic pill link with a rolling label and a fill sweep on hover. */
-export function PillLink({ variant = "solid", className, children, ...props }: Props) {
+/**
+ * Magnetic pill link with a rolling label and a fill sweep on hover.
+ * `icon="download"` swaps the arrow for one that drops through its circle.
+ */
+export function PillLink({ variant = "solid", icon = "arrow", className, children, ...props }: Props) {
   return (
     <Magnetic>
       <a
@@ -37,11 +40,22 @@ export function PillLink({ variant = "solid", className, children, ...props }: P
         </span>
         <span
           className={cn(
-            "grid size-10 place-items-center rounded-full transition-transform duration-500 ease-out-expo group-hover:rotate-45 rtl:-scale-x-100",
+            "relative grid size-10 place-items-center overflow-hidden rounded-full",
+            icon === "arrow" && "transition-transform duration-500 ease-out-expo group-hover:rotate-45 rtl:-scale-x-100",
             variant === "solid" ? "bg-on-accent text-accent" : "bg-accent text-on-accent",
           )}
         >
-          <ArrowUpRight aria-hidden className="size-4" />
+          {icon === "arrow" ? (
+            <ArrowUpRight aria-hidden className="size-4" />
+          ) : (
+            <>
+              <Download aria-hidden className="size-4 transition-transform duration-500 ease-out-expo group-hover:translate-y-10" />
+              <Download
+                aria-hidden
+                className="absolute size-4 -translate-y-10 transition-transform duration-500 ease-out-expo group-hover:translate-y-0"
+              />
+            </>
+          )}
         </span>
       </a>
     </Magnetic>

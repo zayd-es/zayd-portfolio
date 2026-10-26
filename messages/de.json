@@ -25,6 +25,10 @@
     "label": "Sprache",
     "change": "Sprache ändern, aktuell: {language}"
   },
+  "cv": {
+    "download": "Lebenslauf herunterladen",
+    "short": "Lebenslauf"
+  },
   "preloader": {
     "loading": "Wird geladen"
   },
@@ -50,8 +54,7 @@
       "years": "Jahre Erfahrung mit Web-Apps",
       "languages": "Sprachen auf dieser Website",
       "reviewed": "Meines Codes Zeile für Zeile geprüft"
-    },
-    "resume": "Lebenslauf herunterladen"
+    }
   },
   "skills": {
     "label": "Skills",

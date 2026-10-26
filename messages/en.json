@@ -25,6 +25,10 @@
     "label": "Language",
     "change": "Change language, current: {language}"
   },
+  "cv": {
+    "download": "Download CV",
+    "short": "CV"
+  },
   "preloader": {
     "loading": "Loading"
   },
@@ -50,8 +54,7 @@
       "years": "Years building web apps",
       "languages": "Languages this site speaks",
       "reviewed": "Of my code reviewed line by line"
-    },
-    "resume": "Download resume"
+    }
   },
   "skills": {
     "label": "Skills",

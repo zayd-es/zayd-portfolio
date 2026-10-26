@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { CvLink } from "@/components/ui/cv-link";
 import { profile, sections } from "@/data/profile";
 import { useMounted } from "@/hooks/use-mounted";
 import { getDirection, type Locale } from "@/i18n/routing";
@@ -14,6 +15,7 @@ const ease = [0.76, 0, 0.24, 1] as const;
 
 export function MobileMenu() {
   const t = useTranslations("nav");
+  const tCv = useTranslations("cv");
   const [open, setOpen] = useState(false);
   const lenis = useLenis();
   const mounted = useMounted();
@@ -109,20 +111,23 @@ export function MobileMenu() {
                   </ul>
                 </nav>
 
-                <motion.ul
-                  className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted"
+                <motion.div
+                  className="flex flex-col items-start gap-6"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { delay: 0.5 } }}
                   exit={{ opacity: 0 }}
                 >
-                  {profile.socials.map((s) => (
-                    <li key={s.id}>
-                      <a href={s.href} target="_blank" rel="noreferrer" className="hover:text-accent">
-                        {s.label}
-                      </a>
-                    </li>
-                  ))}
-                </motion.ul>
+                  <CvLink onClick={() => setOpen(false)}>{tCv("download")}</CvLink>
+                  <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
+                    {profile.socials.map((s) => (
+                      <li key={s.id}>
+                        <a href={s.href} target="_blank" rel="noreferrer" className="hover:text-accent">
+                          {s.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>,

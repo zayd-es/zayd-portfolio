@@ -4,7 +4,9 @@ export const profile = {
   lastName: "Elabbous",
   email: "elabbouszayd@gmail.com",
   timeZone: "Africa/Casablanca",
-  resume: null as string | null,
+  /** CV in public/ (English only); `resumeFile` is the name it downloads as. */
+  resume: "/Zayd_Elabbous_CV.pdf",
+  resumeFile: "Zayd_Elabbous_CV.pdf",
   socials: [
     { id: "github", label: "GitHub", href: "https://github.com/zayd-es" },
     {

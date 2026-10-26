@@ -24,6 +24,7 @@ const rise: Variants = {
 
 export function Hero() {
   const t = useTranslations("hero");
+  const tCv = useTranslations("cv");
   const rtl = getDirection(useLocale() as Locale) === "rtl";
   const { done } = useIntro();
   const reduced = useReducedMotion();
@@ -108,6 +109,9 @@ export function Hero() {
             <PillLink href="#projects">{t("ctaWork")}</PillLink>
             <PillLink href="#contact" variant="outline">
               {t("ctaContact")}
+            </PillLink>
+            <PillLink href={profile.resume} download={profile.resumeFile} variant="outline" icon="download">
+              {tCv("download")}
             </PillLink>
           </motion.div>
         </div>

@@ -5,12 +5,14 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { LocalTime } from "@/components/hero/local-time";
 import { RevealWords } from "@/components/motion/reveal-words";
+import { PillLink } from "@/components/ui/pill-link";
 import { SectionLabel } from "@/components/ui/section-label";
 import { profile } from "@/data/profile";
 import { ContactForm } from "./contact-form";
 
 export function Contact() {
   const t = useTranslations("contact");
+  const tCv = useTranslations("cv");
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -64,6 +66,11 @@ export function Contact() {
                   {copied ? <Check aria-hidden className="size-4 text-accent" /> : <Copy aria-hidden className="size-4" />}
                   <span aria-live="polite">{copied ? t("copied") : t("copy")}</span>
                 </button>
+              </div>
+              <div className="mt-6">
+                <PillLink href={profile.resume} download={profile.resumeFile} variant="outline" icon="download">
+                  {tCv("download")}
+                </PillLink>
               </div>
             </div>
 

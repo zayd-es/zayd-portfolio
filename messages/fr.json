@@ -25,6 +25,10 @@
     "label": "Langue",
     "change": "Changer de langue, actuelle : {language}"
   },
+  "cv": {
+    "download": "Télécharger le CV",
+    "short": "CV"
+  },
   "preloader": {
     "loading": "Chargement"
   },
@@ -50,8 +54,7 @@
       "years": "Années à créer des applications web",
       "languages": "Langues parlées par ce site",
       "reviewed": "De mon code relu ligne par ligne"
-    },
-    "resume": "Télécharger mon CV"
+    }
   },
   "skills": {
     "label": "Compétences",

@@ -4,6 +4,7 @@ import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useIntro } from "@/components/providers/intro-provider";
+import { CvLink } from "@/components/ui/cv-link";
 import { sections } from "@/data/profile";
 import { cn } from "@/lib/utils";
 import { LocaleSwitcher } from "./locale-switcher";
@@ -13,6 +14,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 export function Header() {
   const t = useTranslations("nav");
+  const tCv = useTranslations("cv");
   const { done } = useIntro();
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
@@ -69,6 +71,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <CvLink title={tCv("download")} className="hidden lg:inline-flex">
+            {tCv("short")}
+          </CvLink>
           <LocaleSwitcher />
           <ThemeToggle />
           <MobileMenu />
