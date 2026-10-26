@@ -176,6 +176,22 @@
       }
     }
   },
+  "learning": {
+    "label": "Lernen",
+    "title": "Immer am <em>Lernen</em>",
+    "intro": "Ich habe mir die Webentwicklung selbst beigebracht und lerne jeden Tag weiter. Tools wie Zustand, Stripe und Sanity CMS habe ich direkt in echten Projekten gelernt – und ich freue mich darauf, alles zu lernen, was das Team nutzt.",
+    "current": "Lerne gerade",
+    "next": "Als Nächstes",
+    "items": {
+      "algorithms": "JavaScript-Algorithmen & Problemlösung",
+      "typescript": "TypeScript im Detail",
+      "english": "Englisch",
+      "python": "Python",
+      "spanish": "Spanisch"
+    },
+    "goal": "Mein langfristiges Ziel: KI-gestützte Produkte bauen und dabei starke Front-End-Skills mit KI-Engineering verbinden.",
+    "closing": "Offen dafür, jedes Tool, Framework und jede Sprache zu lernen."
+  },
   "contact": {
     "label": "Kontakt",
     "title": "Lass uns etwas <em>gemeinsam</em> bauen.",

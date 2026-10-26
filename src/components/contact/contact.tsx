@@ -36,7 +36,7 @@ export function Contact() {
       />
 
       <div className="mx-auto max-w-[1600px]">
-        <SectionLabel index="05">{t("label")}</SectionLabel>
+        <SectionLabel index="06">{t("label")}</SectionLabel>
         <RevealWords
           text={t.raw("title")}
           className="mt-8 max-w-5xl font-display text-[clamp(3rem,8vw,7.5rem)] leading-[0.95] tracking-tight"

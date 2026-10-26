@@ -176,6 +176,22 @@
       }
     }
   },
+  "learning": {
+    "label": "Aprendizaje",
+    "title": "Siempre <em>aprendiendo</em>",
+    "intro": "Aprendí desarrollo web por mi cuenta y sigo aprendiendo cada día. Aprendí herramientas como Zustand, Stripe y Sanity CMS directamente en proyectos reales, y me entusiasma aprender lo que use el equipo.",
+    "current": "Aprendiendo ahora",
+    "next": "Lo siguiente",
+    "items": {
+      "algorithms": "Algoritmos en JavaScript y resolución de problemas",
+      "typescript": "TypeScript a fondo",
+      "english": "Inglés",
+      "python": "Python",
+      "spanish": "Español"
+    },
+    "goal": "Mi objetivo a largo plazo es crear productos impulsados por IA, combinando sólidas habilidades front-end con ingeniería de IA.",
+    "closing": "Abierto a aprender cualquier herramienta, framework o lenguaje."
+  },
   "contact": {
     "label": "Contacto",
     "title": "Construyamos algo <em>juntos.</em>",

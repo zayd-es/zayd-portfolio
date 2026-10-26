@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { About } from "@/components/about/about";
 import { Contact } from "@/components/contact/contact";
 import { Hero } from "@/components/hero/hero";
+import { Learning } from "@/components/learning/learning";
 import { PageTransition } from "@/components/layout/page-transition";
 import { Projects } from "@/components/projects/projects";
 import { Services } from "@/components/services/services";
@@ -30,6 +31,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </Suspense>
       <Suspense>
         <Services />
+      </Suspense>
+      <Suspense>
+        <Learning />
       </Suspense>
       <Suspense>
         <Contact />

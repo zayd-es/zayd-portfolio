@@ -176,6 +176,22 @@
       }
     }
   },
+  "learning": {
+    "label": "Learning",
+    "title": "Always <em>learning</em>",
+    "intro": "I taught myself web development and I keep learning every day. I picked up tools like Zustand, Stripe and Sanity CMS directly on real projects, and I’m excited to learn whatever the team uses.",
+    "current": "Currently learning",
+    "next": "Next up",
+    "items": {
+      "algorithms": "JavaScript algorithms & problem solving",
+      "typescript": "TypeScript in depth",
+      "english": "English",
+      "python": "Python",
+      "spanish": "Spanish"
+    },
+    "goal": "My long-term goal is to build AI-powered products, combining strong front-end skills with AI engineering.",
+    "closing": "Open to learning any tool, framework or language."
+  },
   "contact": {
     "label": "Contact",
     "title": "Let’s build something <em>together.</em>",
