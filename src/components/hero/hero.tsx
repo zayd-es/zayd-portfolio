@@ -52,9 +52,9 @@ export function Hero() {
 
       <motion.div
         style={{ opacity: fade }}
-        className="flex flex-wrap items-center justify-between gap-3 text-sm"
+        className="relative z-10 flex flex-wrap items-center justify-between gap-3 text-sm"
       >
-        <motion.p variants={rise} initial="hidden" animate={state} custom={0.5} className="flex items-center gap-2.5 rounded-full border border-line px-4 py-2">
+        <motion.p variants={rise} initial="hidden" animate={state} custom={0.5} className="flex items-center gap-2.5 rounded-full border border-line bg-bg/70 px-4 py-2 backdrop-blur-md">
           <span className="pulse-dot size-2 rounded-full bg-accent" />
           {t("available")}
         </motion.p>
@@ -69,7 +69,7 @@ export function Hero() {
       <div className="relative flex flex-1 items-center py-10">
         <motion.div
           style={{ y: visualY, scale: visualScale }}
-          className="absolute top-[24%] end-[-24%] w-[88vw] -translate-y-1/2 sm:end-[-8%] sm:w-[70vw] md:top-1/2 md:end-[4%] md:w-[44vw] md:max-w-[700px] md:-translate-y-[64%]"
+          className="absolute top-[24%] right-[-24%] w-[88vw] -translate-y-1/2 sm:right-[-8%] sm:w-[70vw] md:top-1/2 md:right-[4%] md:w-[44vw] md:max-w-[700px] md:-translate-y-[64%]"
         >
           <motion.div
             initial={{ scale: 0.6 }}
@@ -80,15 +80,16 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.div style={{ y: nameY }} className="relative w-full">
+        {/* The name block is laid out LTR in every language, like the visual beside it. */}
+        <motion.div style={{ y: nameY }} dir="ltr" className="relative w-full">
           <motion.p variants={rise} initial="hidden" animate={state} custom={0.35} className="mb-4 flex items-center gap-3 text-sm tracking-[0.2em] text-muted uppercase md:mb-6">
             <span aria-hidden className="h-px w-10 bg-accent" />
             {t("role")}
           </motion.p>
+          {/* Arabic pages give every element line-height 1.7 (globals.css): keep the letters on the h1's own. */}
           <h1
-            dir="ltr"
             aria-label={`${profile.name}, ${t("role")}`}
-            className="font-display text-[clamp(4.5rem,21vw,17.5rem)] leading-[0.8] tracking-[-0.035em]"
+            className="font-display text-[clamp(4.5rem,21vw,17.5rem)] leading-[0.8] tracking-[-0.035em] **:leading-[inherit]"
           >
             <SplitChars text={profile.firstName} play={done} delay={0.05} className="text-cream italic" />
             <span className="block text-end">

@@ -7,7 +7,11 @@ import { cn } from "@/lib/utils";
 
 type Token = { word: string; em: boolean; glued: boolean };
 
-/** Splits a message containing `<em>` tags into words, keeping punctuation glued. */
+/**
+ * Splits a message containing `<em>` tags into words, keeping punctuation glued.
+ * Only ordinary whitespace splits: a no-break space (e.g. Arabic "و" before a
+ * Latin word) keeps both sides together.
+ */
 function tokenize(raw: string) {
   const tokens: Token[] = [];
   let em = false;
@@ -17,13 +21,13 @@ function tokenize(raw: string) {
       em = part === "<em>";
       continue;
     }
-    part.split(/\s+/).forEach((word, i) => {
+    part.split(/[ \t\r\n]+/).forEach((word, i) => {
       if (!word) return;
       // The first word of a chunk touches the previous one when no space separates them.
-      const glued = i === 0 && !spaceBefore && !/^\s/.test(part);
+      const glued = i === 0 && !spaceBefore && !/^[ \t\r\n]/.test(part);
       tokens.push({ word, em, glued });
     });
-    if (part) spaceBefore = /\s$/.test(part);
+    if (part) spaceBefore = /[ \t\r\n]$/.test(part);
   }
   return tokens;
 }

@@ -61,7 +61,6 @@ export function LocaleSwitcher() {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={menuId}
-        aria-label={t("change", { language: localeNames[current] })}
         onClick={() => setOpen((o) => !o)}
         className={cn(
           "flex h-11 items-center gap-2 rounded-full border border-line px-4 text-sm font-medium uppercase transition-colors hover:border-accent hover:text-accent",
@@ -70,6 +69,7 @@ export function LocaleSwitcher() {
       >
         <Globe aria-hidden className="size-4" />
         {current}
+        <span className="sr-only normal-case">, {t("change", { language: localeNames[current] })}</span>
       </button>
 
       <AnimatePresence>

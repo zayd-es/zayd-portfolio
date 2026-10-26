@@ -41,11 +41,12 @@ export function Header() {
       >
         <SectionLink
           section="home"
-          aria-label={t("home")}
           dir="ltr"
           className="font-display text-2xl leading-none italic"
         >
+          {/* The accessible name keeps the visible "Zayd" so voice control can target it. */}
           Zayd<span className="text-accent">.</span>
+          <span className="sr-only"> {t("home")}</span>
         </SectionLink>
 
         <nav aria-label={t("label")} className="hidden lg:block">
