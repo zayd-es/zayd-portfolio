@@ -12,7 +12,6 @@ export const profile = {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/zayd-el-abbous-9a505b289/",
     },
-    { id: "x", label: "X", href: "https://x.com/m4be_zayd" },
   ],
 } as const;
 

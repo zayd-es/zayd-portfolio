@@ -85,7 +85,6 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
     },
     twitter: {
       card: "summary_large_image",
-      creator: "@m4be_zayd",
       title: t("title"),
       description: t("description"),
     },
